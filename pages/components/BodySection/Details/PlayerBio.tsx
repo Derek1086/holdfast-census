@@ -8,6 +8,7 @@ import Kalani from "./bioImages/Kalani.png";
 import DefaultIcon from "./bioImages/DefaultIcon.png";
 import Giveup from "./bioImages/Giveup.jpg";
 import Hotspot from "./bioImages/Hotspot.jpg";
+import Peprika from "./bioImages/Peprika.png";
 
 interface PlayerBioProps {
   player: string;
@@ -37,6 +38,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Giveup;
       case "Hotspot":
         return Hotspot;
+      case "Peprika":
+        return Peprika;
       default:
         return DefaultIcon;
     }
