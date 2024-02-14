@@ -9,6 +9,7 @@ import DefaultIcon from "./bioImages/DefaultIcon.png";
 import Giveup from "./bioImages/Giveup.jpg";
 import Hotspot from "./bioImages/Hotspot.jpg";
 import Peprika from "./bioImages/Peprika.png";
+import Perc from "./bioImages/Perc.png";
 
 interface PlayerBioProps {
   player: string;
@@ -40,6 +41,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Hotspot;
       case "Peprika":
         return Peprika;
+      case "Perc":
+        return Perc;
       default:
         return DefaultIcon;
     }
@@ -77,19 +80,19 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                   <div className={classes.location}>
                     {foundPlayer.city ? (
                       <div
-                        className={classes.info}
+                        className={classes.infoLocation}
                       >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
                     ) : (
                       <div
-                        className={classes.info}
+                        className={classes.infoLocation}
                       >{`Location: ${foundPlayer.state}`}</div>
                     )}
                   </div>
                 </div>
               </div>
-              <div className={classes.mainInfo}>
+              <div className={classes.bioInfo}>
                 {foundPlayer.bio !== "" ? (
-                  <div className={classes.info}>{`${foundPlayer.bio}`}</div>
+                  <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
                 ) : (
                   <></>
                 )}
