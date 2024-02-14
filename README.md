@@ -8,7 +8,7 @@ Welcome to the Holdfast Melee Census, a web application designed to display an i
 
 ## Introduction
 
-Holdfast Melee Census is a tool created for the Holdfast: Nations at War community to facilitate the tracking and analysis of census data. It provides an easy-to-use interface for users to input and view census information on an interactive map.
+Holdfast Melee Census is a tool created for the Holdfast: Nations at War community to facilitate the tracking and analysis of player location data. It provides an easy-to-use interface for users to view census information on an interactive map.
 
 ## Features
 
