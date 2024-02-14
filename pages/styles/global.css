@@ -1,0 +1,26 @@
+html {
+  scrollbar-width: normal;
+  scrollbar-color: #36393f #40444b;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #40444b;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #202225;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #36393f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #36393f;
+}

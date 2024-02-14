@@ -1,0 +1,82 @@
+.bioContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 0px solid #000;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.close:hover {
+  background-color: #40444b;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.mainInfo {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+
+.pfp {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 150px;
+  width: 150px;
+}
+
+.header {
+  width: 100%;
+}
+
+.plrName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.location {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.bio {
+  width: 90%;
+  height: 90%;
+}
+
+.info {
+  padding-bottom: 5%;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .pfp {
+    height: 75px;
+    width: 75px;
+  }
+
+  .info {
+    font-size: 0.75rem;
+  }
+}

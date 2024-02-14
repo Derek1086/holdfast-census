@@ -1,0 +1,72 @@
+.buttonContainer {
+  display: flex;
+}
+
+.btns {
+  width: 60%;
+}
+
+.btn {
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  font-family: sans-serif;
+  color: white;
+  border: 0px solid #000;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #40444b;
+}
+
+.legendContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+  width: 40%;
+  height: 25px;
+}
+
+.legend {
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #fad2ff,
+    #f6b2ff,
+    #f08efd,
+    #ed64ff,
+    #e83cff,
+    #e51eff,
+    #e100ff,
+    #de01fd
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 2px solid #18191c;
+}
+
+.minText {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filler {
+  width: 80%;
+}
+
+.maxText {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legendText {
+  font-family: sans-serif;
+}
