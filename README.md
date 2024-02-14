@@ -12,5 +12,5 @@ Holdfast Melee Census is a tool created for the Holdfast: Nations at War communi
 
 ## Features
 
-- **Interactive Map:** Explore the NA and EU regions by zooming in/out and dragging the map around for precise tracking. Click anywhere to display player data
+- **Interactive Map:** Explore the NA and EU regions by zooming in/out and dragging the map around for precise tracking. Click on specific areas to view the players in that area.
 - **Census Data:** View player data such as name, regiment, location, and bio's.
