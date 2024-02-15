@@ -10,6 +10,20 @@ import Giveup from "./bioImages/Giveup.jpg";
 import Hotspot from "./bioImages/Hotspot.jpg";
 import Peprika from "./bioImages/Peprika.png";
 import Perc from "./bioImages/Perc.png";
+import August from "./bioImages/August.png";
+import AdamTheMeta from "./bioImages/AdamTheMeta.png";
+import BaconIsAwesome from "./bioImages/BaconIsAwesome.png";
+import Charmy from "./bioImages/Charmy.png";
+import chrome from "./bioImages/chrome.png";
+import Clear from "./bioImages/Clear.png";
+import Ed from "./bioImages/Ed.png";
+import Frewbay from "./bioImages/Frewbay.png";
+import Gendalf from "./bioImages/Gendalf.png";
+import Hellameme from "./bioImages/Hellameme.png";
+import Jerry from "./bioImages/Jerry.png";
+import Jewourgie from "./bioImages/Jewourgie.png";
+import MattGS from "./bioImages/MattGS.png";
+import Rave from "./bioImages/Rave.png";
 
 interface PlayerBioProps {
   player: string;
@@ -43,6 +57,34 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Peprika;
       case "Perc":
         return Perc;
+      case "Captain August":
+        return August;
+      case "Adam The Meta":
+        return AdamTheMeta;
+      case "Bacon Is Awesome":
+        return BaconIsAwesome;
+      case "Charmy":
+        return Charmy;
+      case "chrome":
+        return chrome;
+      case "Clear":
+        return Clear;
+      case "Ed":
+        return Ed;
+      case "Frewbay":
+        return Frewbay;
+      case "Gendalf":
+        return Gendalf;
+      case "HellaMeme":
+        return Hellameme;
+      case "Jerry":
+        return Jerry;
+      case "Jewourgie":
+        return Jewourgie;
+      case "MattGS":
+        return MattGS;
+      case "Rave":
+        return Rave;
       default:
         return DefaultIcon;
     }
