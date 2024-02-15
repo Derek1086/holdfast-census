@@ -70,3 +70,11 @@
 .legendText {
   font-family: sans-serif;
 }
+
+@media (max-width: 1000px) {
+  .btn {
+    height: 0px;
+    width: 0px;
+    color: transparent;
+  }
+}

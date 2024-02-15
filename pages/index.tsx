@@ -11,6 +11,7 @@ export type Player = {
   city: string;
   bio: string;
   state: string;
+  rating: string;
 };
 
 export type RegionData = {
@@ -59,6 +60,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
           city: player.city,
           bio: player.bio,
           state: player.state,
+          rating: player.rating,
         })),
       }));
     };
