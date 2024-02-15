@@ -33,7 +33,11 @@ import Power from "./bioImages/Power.png";
 import Svenypoo from "./bioImages/Svenypoo.png";
 import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
-import { warn } from "console";
+import DannyG from "./bioImages/DannyG.png";
+import Gustav from "./bioImages/Gustav.png";
+import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
+import Okaykoay from "./bioImages/Okaykoay.png";
+import VG from "./bioImages/VG.png";
 
 interface PlayerBioProps {
   player: string;
@@ -55,6 +59,16 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
 
   const findImage = (name: string) => {
     switch (name) {
+      case "Danny G":
+        return DannyG;
+      case "Gustav":
+        return Gustav;
+      case "KaputBasket3192":
+        return KaputBasket3192;
+      case "Okaykoay":
+        return Okaykoay;
+      case "VG":
+        return VG;
       case "Warden":
         return Warden;
       case "Austro":
