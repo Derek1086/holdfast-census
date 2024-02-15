@@ -24,6 +24,16 @@ import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
 import MattGS from "./bioImages/MattGS.png";
 import Rave from "./bioImages/Rave.png";
+import Ghost from "./bioImages/Ghost.png";
+import GreenDan from "./bioImages/GreenDan.png";
+import Inglorian from "./bioImages/Inglorian.png";
+import ItalianTurtle from "./bioImages/ItalianTurtle.png";
+import Pilot from "./bioImages/Pilot.png";
+import Power from "./bioImages/Power.png";
+import Svenypoo from "./bioImages/Svenypoo.png";
+import VHA from "./bioImages/VHA.png";
+import Warden from "./bioImages/Warden.png";
+import { warn } from "console";
 
 interface PlayerBioProps {
   player: string;
@@ -45,6 +55,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
 
   const findImage = (name: string) => {
     switch (name) {
+      case "Warden":
+        return Warden;
       case "Austro":
         return Austro;
       case "Kalani":
@@ -85,6 +97,22 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return MattGS;
       case "Rave":
         return Rave;
+      case "GHO5T":
+        return Ghost;
+      case "Green Dan":
+        return GreenDan;
+      case "Inglorian":
+        return Inglorian;
+      case "Italian Turtle":
+        return ItalianTurtle;
+      case "Pilot":
+        return Pilot;
+      case "Power":
+        return Power;
+      case "Svenypoo":
+        return Svenypoo;
+      case "VHA":
+        return VHA;
       default:
         return DefaultIcon;
     }
