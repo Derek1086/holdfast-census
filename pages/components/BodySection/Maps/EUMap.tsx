@@ -61,6 +61,8 @@ const EUMap: React.FC<EUMapProps> = ({
     }
 
     switch (count) {
+      case 0:
+        return "#FFFFFF";
       case 1:
         return "#FAD2FF";
       case 2:
@@ -75,10 +77,9 @@ const EUMap: React.FC<EUMapProps> = ({
         return "#E51EFF";
       case 7:
         return "#E100FF";
-      case 8:
-        return "#DE01FD";
+
       default:
-        return "#FFFFFF";
+        return "#DE01FD";
     }
   };
 

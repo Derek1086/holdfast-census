@@ -60,6 +60,8 @@ const NAMap: React.FC<NAMapProps> = ({
     }
 
     switch (count) {
+      case 0:
+        return "#FFFFFF";
       case 1:
         return "#FAD2FF";
       case 2:
@@ -74,11 +76,9 @@ const NAMap: React.FC<NAMapProps> = ({
         return "#E51EFF";
       case 7:
         return "#E100FF";
-      case 8:
-        return "#DE01FD";
 
       default:
-        return "#FFFFFF";
+        return "#DE01FD";
     }
   };
 

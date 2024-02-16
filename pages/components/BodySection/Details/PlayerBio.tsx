@@ -14,6 +14,7 @@ import Austro from "./bioImages/Austro.png";
 import BaconIsAwesome from "./bioImages/BaconIsAwesome.png";
 import Bandej from "./bioImages/Bandej.png";
 import Billjet from "./bioImages/Billjet.png";
+import bushlinebyrant from "./bioImages/bushlinebyrant.png";
 import Cerb from "./bioImages/Cerb.png";
 import Charleslee from "./bioImages/Charleslee.png";
 import Charmy from "./bioImages/Charmy.png";
@@ -124,6 +125,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Bandej;
       case "BILLJET":
         return Billjet;
+      case "bushlinebyrant":
+        return bushlinebyrant;
       case "Cerb":
         return Cerb;
       case "Charles":
