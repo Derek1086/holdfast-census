@@ -18,7 +18,9 @@ import Cerb from "./bioImages/Cerb.png";
 import Charleslee from "./bioImages/Charleslee.png";
 import Charmy from "./bioImages/Charmy.png";
 import chrome from "./bioImages/chrome.png";
+import CL0UD from "./bioImages/CL0UD.png";
 import Clear from "./bioImages/Clear.png";
+import Comandosim47 from "./bioImages/Comandosim47.jpg";
 import crazy from "./bioImages/crazy.png";
 import DannyG from "./bioImages/DannyG.png";
 import Dorri from "./bioImages/Dorri.png";
@@ -67,6 +69,7 @@ import Rave from "./bioImages/Rave.png";
 import Reddishh from "./bioImages/Reddishh.png";
 import Robo from "./bioImages/Robo.png";
 import Russell from "./bioImages/Russell.png";
+import Shane from "./bioImages/Shane.png";
 import Shmadie from "./bioImages/Shmadie.png";
 import Sock from "./bioImages/Sock.png";
 import Spicypaper from "./bioImages/Spicypaper.png";
@@ -128,6 +131,10 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Charmy;
       case "chrome":
         return chrome;
+      case "CL0UD":
+        return CL0UD;
+      case "Comandosim47":
+        return Comandosim47;
       case "Clear":
         return Clear;
       case "crazy":
@@ -228,6 +235,9 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Russell;
       case "Robo":
         return Robo;
+
+      case "Shane":
+        return Shane;
       case "Shmadie":
         return Shmadie;
       case "Sock":
