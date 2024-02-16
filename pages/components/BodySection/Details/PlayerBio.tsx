@@ -46,6 +46,7 @@ import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
 import Kalani from "./bioImages/Kalani.png";
 import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
+import Kasu from "./bioImages/Kasu.png";
 import Keth from "./bioImages/Keth.png";
 import Lobcity from "./bioImages/Lobcity.png";
 import Lynx from "./bioImages/Lynx.png";
@@ -189,6 +190,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Kalani;
       case "KaputBasket3192":
         return KaputBasket3192;
+      case "Kasu":
+        return Kasu;
       case "keth":
         return Keth;
       case "Lobcity":
