@@ -296,7 +296,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 />
                 <div className={classes.header}>
                   <div className={classes.plrName}>
-                    {foundPlayer.regiment !== undefined ? (
+                    {foundPlayer.regiment !== undefined ||
+                    foundPlayer.regiment !== "" ? (
                       <div
                         className={classes.info}
                       >{`${foundPlayer.regiment} ${foundPlayer.name}`}</div>
@@ -307,7 +308,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.rating !== undefined ? (
+                    {foundPlayer.rating !== undefined ||
+                    foundPlayer.rating !== "" ? (
                       <div
                         className={classes.infoLocation}
                       >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
@@ -318,7 +320,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.city !== undefined ? (
+                    {foundPlayer.city !== undefined ||
+                    foundPlayer.city !== "" ? (
                       <div
                         className={classes.infoLocation}
                       >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
@@ -331,10 +334,10 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 </div>
               </div>
               <div className={classes.bioInfo}>
-                {foundPlayer.bio !== undefined ? (
+                {foundPlayer.bio !== undefined || foundPlayer.bio !== "" ? (
                   <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
                 ) : (
-                  <div className={classes.infoBio}>No bio available</div>
+                  <div className={classes.infoBio}></div>
                 )}
               </div>
             </div>
