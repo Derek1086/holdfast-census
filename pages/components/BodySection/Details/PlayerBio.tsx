@@ -308,15 +308,15 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.rating !== "" ||
-                    foundPlayer.rating !== undefined ? (
-                      <div
-                        className={classes.infoLocation}
-                      >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
-                    ) : (
+                    {foundPlayer.rating === "" ||
+                    foundPlayer.rating === undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Average Impact Rating: None`}</div>
+                    ) : (
+                      <div
+                        className={classes.infoLocation}
+                      >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
                     )}
                   </div>
                   <div className={classes.location}>
