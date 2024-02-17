@@ -96,6 +96,9 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
   playersInLocation,
   setViewingPlayer,
 }) => {
+  if (!playersInLocation) {
+    return <></>;
+  }
   // Find the player in the array based on the name
   const foundPlayer = playersInLocation.find((p) => p.name === player);
 

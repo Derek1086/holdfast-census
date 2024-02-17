@@ -11,8 +11,20 @@ const PlayerItem: React.FC<PlayerItemProps> = ({
   setViewingPlayer,
   player,
 }) => {
+  if (!player) {
+    return <></>;
+  }
+
   const handleClick = () => {
-    setViewingPlayer(player.name);
+    try {
+      if (setViewingPlayer) {
+        setViewingPlayer(player.name);
+      } else {
+        throw new Error("setViewingPlayer function is not provided.");
+      }
+    } catch (error) {
+      console.error("error");
+    }
   };
 
   return (

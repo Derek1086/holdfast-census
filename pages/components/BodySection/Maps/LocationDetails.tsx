@@ -134,6 +134,10 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
   region,
   selectedLocation,
 }) => {
+  // Handle undefined region
+  if (!region) {
+    return <></>;
+  }
   var regions = region === "NA" ? NAREGIONS : EUREGIONS;
 
   const convertRegion = (input: string, to: string) => {
