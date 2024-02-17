@@ -193,7 +193,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
       case "Jewourgie":
         return Jewourgie;
       case "Kalani":
-        return Kalani;
+        return DefaultIcon;
       case "KaputBasket3192":
         return KaputBasket3192;
       case "Kasu":
