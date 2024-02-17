@@ -46,10 +46,10 @@
 
 @media (max-width: 1000px) {
   .inner {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .outer {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
 }
