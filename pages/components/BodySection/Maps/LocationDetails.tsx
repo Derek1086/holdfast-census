@@ -137,25 +137,38 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
   var regions = region === "NA" ? NAREGIONS : EUREGIONS;
 
   const convertRegion = (input: string, to: string) => {
+    if (!input || !to) {
+      // Handle missing input or conversion type
+      return "Invalid input or conversion type";
+    }
+
     if (to === "TO_ABBREVIATED") {
       input = input.replace(/\w\S*/g, function (txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
       });
-      for (const region of regions) {
-        if (region[0] === input) {
-          return region[1];
-        }
+
+      const matchingRegion = regions.find((region) => region[0] === input);
+
+      if (matchingRegion) {
+        return matchingRegion[1];
+      } else {
+        // Handle case where no matching region is found
+        return "Unknown region";
       }
     } else if (to === "TO_NAME") {
       input = input.toUpperCase();
-      for (const region of regions) {
-        if (region[1] === input) {
-          return region[0];
-        }
+      const matchingRegion = regions.find((region) => region[1] === input);
+
+      if (matchingRegion) {
+        return matchingRegion[0];
+      } else {
+        // Handle case where no matching region is found
+        return "Unknown region";
       }
     }
 
-    return "";
+    // Handle unknown conversion type
+    return "Invalid conversion type";
   };
 
   return (

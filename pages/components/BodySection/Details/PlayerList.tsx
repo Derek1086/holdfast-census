@@ -20,22 +20,28 @@ const PlayerList: React.FC<PlayerListProps> = ({
   const [sortBy, setSortBy] = useState<"name" | "regiment">("name");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [sortedPlayers, setSortedPlayers] = useState<Player[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const updatedSortedPlayers = [...playersInLocation].sort((a, b) => {
-      if (sortBy === "name") {
-        return sortOrder === "asc"
-          ? a.name.localeCompare(b.name)
-          : b.name.localeCompare(a.name);
-      } else if (sortBy === "regiment") {
-        return sortOrder === "asc"
-          ? a.regiment.localeCompare(b.regiment)
-          : b.regiment.localeCompare(a.regiment);
-      }
-      return 0;
-    });
+    try {
+      const updatedSortedPlayers = [...playersInLocation].sort((a, b) => {
+        if (sortBy === "name") {
+          return sortOrder === "asc"
+            ? a.name.localeCompare(b.name)
+            : b.name.localeCompare(a.name);
+        } else if (sortBy === "regiment") {
+          return sortOrder === "asc"
+            ? a.regiment.localeCompare(b.regiment)
+            : b.regiment.localeCompare(a.regiment);
+        }
+        return 0;
+      });
 
-    setSortedPlayers(updatedSortedPlayers);
+      setSortedPlayers(updatedSortedPlayers);
+      setError(null); // Reset error state if successful
+    } catch (error) {
+      setError("An error occurred while sorting players."); // Set error state if there's an error
+    }
   }, [playersInLocation, sortBy, sortOrder]);
 
   const toggleSort = (criteria: "name" | "regiment") => {
@@ -57,7 +63,11 @@ const PlayerList: React.FC<PlayerListProps> = ({
 
   return (
     <React.Fragment>
-      {sortedPlayers.length > 0 ? (
+      {error ? (
+        <div className={classes.errorContainer}>
+          <p className={classes.errorText}>{error}</p>
+        </div>
+      ) : sortedPlayers.length > 0 ? (
         <div className={classes.listContainer}>
           <div className={classes.buttonContainer}>
             <button

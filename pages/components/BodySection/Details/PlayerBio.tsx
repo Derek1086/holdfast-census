@@ -293,7 +293,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 />
                 <div className={classes.header}>
                   <div className={classes.plrName}>
-                    {foundPlayer.regiment !== "" ? (
+                    {foundPlayer.regiment !== undefined ? (
                       <div
                         className={classes.info}
                       >{`${foundPlayer.regiment} ${foundPlayer.name}`}</div>
@@ -304,18 +304,18 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.rating === "" ? (
-                      <div
-                        className={classes.infoLocation}
-                      >{`Average Impact Rating: None`}</div>
-                    ) : (
+                    {foundPlayer.rating !== undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
+                    ) : (
+                      <div
+                        className={classes.infoLocation}
+                      >{`Average Impact Rating: None`}</div>
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.city ? (
+                    {foundPlayer.city !== undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
@@ -328,16 +328,16 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 </div>
               </div>
               <div className={classes.bioInfo}>
-                {foundPlayer.bio !== "" ? (
+                {foundPlayer.bio !== undefined ? (
                   <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
                 ) : (
-                  <></>
+                  <div className={classes.infoBio}>No bio available</div>
                 )}
               </div>
             </div>
           </>
         ) : (
-          <div>Player not found</div>
+          <div className={classes.error}>Player not found</div>
         )}
       </div>
     </div>
