@@ -296,8 +296,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 />
                 <div className={classes.header}>
                   <div className={classes.plrName}>
-                    {foundPlayer.regiment !== undefined ||
-                    foundPlayer.regiment !== "" ? (
+                    {foundPlayer.regiment !== "" ||
+                    foundPlayer.regiment !== undefined ? (
                       <div
                         className={classes.info}
                       >{`${foundPlayer.regiment} ${foundPlayer.name}`}</div>
@@ -308,8 +308,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.rating !== undefined ||
-                    foundPlayer.rating !== "" ? (
+                    {foundPlayer.rating !== "" ||
+                    foundPlayer.rating !== undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
@@ -320,8 +320,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.city !== undefined ||
-                    foundPlayer.city !== "" ? (
+                    {foundPlayer.city !== "" ||
+                    foundPlayer.city !== undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
@@ -334,7 +334,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 </div>
               </div>
               <div className={classes.bioInfo}>
-                {foundPlayer.bio !== undefined || foundPlayer.bio !== "" ? (
+                {foundPlayer.bio !== "" || foundPlayer.bio !== undefined ? (
                   <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
                 ) : (
                   <div className={classes.infoBio}></div>
