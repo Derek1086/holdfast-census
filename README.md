@@ -1,5 +1,7 @@
 # Holdfast Melee Census
 
+## [View Here](https://holdfast-census.vercel.app)
+
 Welcome to the Holdfast Melee Census, a web application designed to display an interactive map for tracking and visualizing player location data in the game Holdfast: Nations at War.
 
 ## Table of Contents
