@@ -57,6 +57,7 @@ import Mattrobes from "./bioImages/Mattrobes.png";
 import MilkMan from "./bioImages/MilkMan.png";
 import moxeetwo from "./bioImages/moxeetwo.png";
 import NoahMcMoney from "./bioImages/NoahMcMoney.png";
+import NDK from "./bioImages/NDK.jpg";
 import Nine from "./bioImages/Nine.png";
 import Notacoolguy from "./bioImages/Notacoolguy.png";
 import Okaykoay from "./bioImages/Okaykoay.png";
@@ -218,6 +219,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Nine;
       case "Noah McMoney":
         return NoahMcMoney;
+      case "Noah":
+        return NDK;
       case "Notacoolguy":
         return Notacoolguy;
       case "Okaykoay":
