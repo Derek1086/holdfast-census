@@ -323,15 +323,15 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                     )}
                   </div>
                   <div className={classes.location}>
-                    {foundPlayer.city !== "" ||
-                    foundPlayer.city !== undefined ? (
-                      <div
-                        className={classes.infoLocation}
-                      >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
-                    ) : (
+                    {foundPlayer.city === "" ||
+                    foundPlayer.city === undefined ? (
                       <div
                         className={classes.infoLocation}
                       >{`Location: ${foundPlayer.state}`}</div>
+                    ) : (
+                      <div
+                        className={classes.infoLocation}
+                      >{`Location: ${foundPlayer.city}, ${foundPlayer.state}`}</div>
                     )}
                   </div>
                 </div>
