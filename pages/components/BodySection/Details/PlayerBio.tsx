@@ -340,10 +340,10 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                 </div>
               </div>
               <div className={classes.bioInfo}>
-                {foundPlayer.bio !== "" || foundPlayer.bio !== undefined ? (
-                  <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
-                ) : (
+                {foundPlayer.bio === "" || foundPlayer.bio === undefined ? (
                   <div className={classes.infoBio}></div>
+                ) : (
+                  <div className={classes.infoBio}>{`${foundPlayer.bio}`}</div>
                 )}
               </div>
             </div>
