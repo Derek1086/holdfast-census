@@ -6,16 +6,20 @@ import Image from "next/image";
 import DefaultIcon from "./bioImages/DefaultIcon.png";
 import _7nation from "./bioImages/7nation.png";
 import AdamTheMeta from "./bioImages/AdamTheMeta.png";
+import Amit from "./bioImages/Amit.png";
 import Almondo from "./bioImages/Almondo.png";
 import Alphastar from "./bioImages/Alphastar.png";
+import Algida from "./bioImages/algida.png";
 import Amy from "./bioImages/Amy.png";
 import August from "./bioImages/August.png";
 import Austro from "./bioImages/Austro.png";
 import BaconIsAwesome from "./bioImages/BaconIsAwesome.png";
 import Bandej from "./bioImages/Bandej.png";
 import Billjet from "./bioImages/Billjet.png";
+import Brax from "./bioImages/Brax.png";
 import bushlinebyrant from "./bioImages/bushlinebyrant.png";
 import Buxa from "./bioImages/Buxa.png";
+import catboy from "./bioImages/catboy.png";
 import Cerb from "./bioImages/Cerb.png";
 import Charleslee from "./bioImages/Charleslee.png";
 import Charmy from "./bioImages/Charmy.png";
@@ -24,18 +28,22 @@ import CL0UD from "./bioImages/CL0UD.png";
 import Clear from "./bioImages/Clear.png";
 import Comandosim47 from "./bioImages/Comandosim47.png";
 import crazy from "./bioImages/crazy.png";
+import DankLee from "./bioImages/Danklee.png";
 import DannyG from "./bioImages/DannyG.png";
+import Davidgabri from "./bioImages/Davidgabri_28.png";
 import Dorri from "./bioImages/Dorri.png";
 import Duncan from "./bioImages/Duncan.png";
 import Ecual from "./bioImages/Ecual.png";
 import Felton from "./bioImages/Felton.png";
 import Fires from "./bioImages/Fires.png";
+import FoX from "./bioImages/FoX.png";
 import Frankiemcnutslap from "./bioImages/frankiemcnutslap.png";
 import Frewbay from "./bioImages/Frewbay.png";
 import Ghost from "./bioImages/Ghost.png";
 import Gendalf from "./bioImages/Gendalf.png";
 import Giveup from "./bioImages/Giveup.jpg";
 import GreenDan from "./bioImages/GreenDan.png";
+import Gryphon from "./bioImages/Gryphon.png";
 import Gustav from "./bioImages/Gustav.png";
 import Ed from "./bioImages/Ed.png";
 import Hellameme from "./bioImages/Hellameme.png";
@@ -46,10 +54,12 @@ import ItalianTurtle from "./bioImages/ItalianTurtle.png";
 import JaysonH from "./bioImages/JaysonH.png";
 import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
+import JulianVHipper from "./bioImages/JulianVHipper.png";
 import Kalani from "./bioImages/Kalani.png";
 import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
 import Kasu from "./bioImages/Kasu.png";
 import Keth from "./bioImages/keth.png";
+import klawik from "./bioImages/klawik.png";
 import Lobcity from "./bioImages/Lobcity.png";
 import Lynx from "./bioImages/Lynx.png";
 import Madbox from "./bioImages/Madbox.png";
@@ -57,6 +67,7 @@ import MattGS from "./bioImages/MattGS.png";
 import Mattrobes from "./bioImages/Mattrobes.png";
 import MilkMan from "./bioImages/MilkMan.png";
 import moxeetwo from "./bioImages/moxeetwo.png";
+import Muszy from "./bioImages/Muszy.png";
 import NoahMcMoney from "./bioImages/NoahMcMoney.png";
 import NDK from "./bioImages/NDK.jpg";
 import Nine from "./bioImages/Nine.png";
@@ -82,10 +93,13 @@ import Svenypoo from "./bioImages/Svenypoo.png";
 import Thad from "./bioImages/Thad.png";
 import Toasted from "./bioImages/toasted.png";
 import ToasterCoaster from "./bioImages/ToasterCoaster.png";
+import Trainboy from "./bioImages/Trainboy.png";
+import Turtles from "./bioImages/Turtles.png";
 import VG from "./bioImages/VG.png";
 import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
 import WifiBills from "./bioImages/WifiBills.png";
+import Wink from "./bioImages/Wink.png";
 
 interface PlayerBioProps {
   player: string;
@@ -116,8 +130,12 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return AdamTheMeta;
       case "Almondo":
         return Almondo;
+      case "algida":
+        return Algida;
       case "AlphaStar":
         return Alphastar;
+      case "Amit":
+        return Amit;
       case "Amy":
         return Amy;
       case "Captain August":
@@ -130,10 +148,14 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Bandej;
       case "BILLJET":
         return Billjet;
+      case "Brax":
+        return Brax;
       case "bushlinebyrant":
         return bushlinebyrant;
       case "Buxa":
         return Buxa;
+      case "catboy":
+        return catboy;
       case "Cerb":
         return Cerb;
       case "Charles":
@@ -150,6 +172,10 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Clear;
       case "crazy":
         return crazy;
+      case "Davidgabri_28":
+        return Davidgabri;
+      case "Dank Lee":
+        return DankLee;
       case "Danny G":
         return DannyG;
       case "Dorri":
@@ -162,6 +188,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Felton;
       case "Fires":
         return Fires;
+      case "FoX":
+        return FoX;
       case "FrankieMcNutSlap":
         return Frankiemcnutslap;
       case "Frewbay":
@@ -174,6 +202,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Ghost;
       case "Green Dan":
         return GreenDan;
+      case "Gryphon":
+        return Gryphon;
       case "GHO5T":
         return Ghost;
       case "Gustav":
@@ -196,6 +226,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Jerry;
       case "Jewourgie":
         return Jewourgie;
+      case "Julian v. Hipper":
+        return JulianVHipper;
       case "Kalani":
         return Kalani;
       case "KaputBasket3192":
@@ -204,6 +236,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Kasu;
       case "keth":
         return Keth;
+      case "klawik":
+        return klawik;
       case "Lobcity":
         return Lobcity;
       case "Lynx":
@@ -218,6 +252,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return MilkMan;
       case "moxeetwo":
         return moxeetwo;
+      case "Muszy":
+        return Muszy;
       case "Nine":
         return Nine;
       case "Noah McMoney":
@@ -250,7 +286,6 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Russell;
       case "Robo":
         return Robo;
-
       case "Shane":
         return Shane;
       case "Shmadie":
@@ -269,6 +304,10 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Toasted;
       case "ToasterCoaster":
         return ToasterCoaster;
+      case "Trainboy":
+        return Trainboy;
+      case "Turtles":
+        return Turtles;
       case "VHA":
         return VHA;
       case "VG":
@@ -277,6 +316,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Warden;
       case "Wifi Bills":
         return WifiBills;
+      case "Wînk":
+        return Wink;
 
       default:
         return DefaultIcon;
