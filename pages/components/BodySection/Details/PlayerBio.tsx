@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./PlayerBio.module.css";
 import { Player } from "../../..";
+import PlayerRating from "./PlayerRating";
 
 import Image from "next/image";
 import DefaultIcon from "./bioImages/DefaultIcon.png";
@@ -397,9 +398,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                         className={classes.infoLocation}
                       >{`Average Impact Rating: None`}</div>
                     ) : (
-                      <div
-                        className={classes.infoLocation}
-                      >{`Average Impact Rating: ${foundPlayer.rating}`}</div>
+                      <PlayerRating player={foundPlayer} />
                     )}
                   </div>
                   <div className={classes.location}>
