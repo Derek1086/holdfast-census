@@ -28,6 +28,7 @@ import chrome from "./bioImages/chrome.png";
 import CL0UD from "./bioImages/CL0UD.png";
 import Clear from "./bioImages/Clear.png";
 import Comandosim47 from "./bioImages/Comandosim47.png";
+import Constantine from "./bioImages/Constantine.png";
 import Crashy from "./bioImages/Crashy.png";
 import crazy from "./bioImages/crazy.png";
 import DankLee from "./bioImages/Danklee.png";
@@ -49,6 +50,7 @@ import Giveup from "./bioImages/Giveup.jpg";
 import GreenDan from "./bioImages/GreenDan.png";
 import Gryphon from "./bioImages/Gryphon.png";
 import Gustav from "./bioImages/Gustav.png";
+import Haines from "./bioImages/Haines.png";
 import Ed from "./bioImages/Ed.png";
 import Hellameme from "./bioImages/Hellameme.png";
 import Highlander from "./bioImages/Highlander.png";
@@ -99,6 +101,7 @@ import Stryker from "./bioImages/Stryker.png";
 import Svenypoo from "./bioImages/Svenypoo.png";
 import Thad from "./bioImages/Thad.png";
 import TheDutchMan from "./bioImages/TheDutchMan.png";
+import Tigo from "./bioImages/Tigo.png";
 import Toasted from "./bioImages/toasted.png";
 import ToasterCoaster from "./bioImages/ToasterCoaster.png";
 import Trainboy from "./bioImages/Trainboy.png";
@@ -179,6 +182,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return CL0UD;
       case "Comandosim47":
         return Comandosim47;
+      case "Kingsman Constantine":
+        return Constantine;
       case "Clear":
         return Clear;
       case "crazy":
@@ -225,6 +230,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Ghost;
       case "Gustav":
         return Gustav;
+      case "Haines":
+        return Haines;
       case "Ed":
         return Ed;
       case "HellaMeme":
@@ -325,6 +332,8 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Thad;
       case "TheDutchMan":
         return TheDutchMan;
+      case "Tigo":
+        return Tigo;
       case "Toasted":
         return Toasted;
       case "ToasterCoaster":
