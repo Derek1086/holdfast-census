@@ -14,6 +14,34 @@ interface PlayerRatingData {
   impactRating: string;
 }
 
+type UpdatedData = {
+  rating: string;
+};
+
+const handleUpdatePlayer = async (
+  playerId: string,
+  updatedData: UpdatedData,
+  region: string
+) => {
+  try {
+    const response = await axios.post("/api/updatePlayer", {
+      playerId,
+      updatedData,
+      region,
+    });
+
+    if (response.status === 200) {
+      console.log("Player data updated successfully");
+    } else if (response.status === 404) {
+      console.log("Player not found");
+    } else {
+      console.log("Internal Server Error");
+    }
+  } catch (error: any) {
+    console.error("Error updating player:", error);
+  }
+};
+
 async function getSpreadsheetValues(region: string, playerId: string) {
   const spreadsheetId = "13U3pfFnv7kvx6j5YdUs7lEu57V07QEPdFeFWjHO79v4";
   const range = region === "NA" ? "NA Ranks" : "EU Ranks";
@@ -57,7 +85,16 @@ async function getSpreadsheetValues(region: string, playerId: string) {
         };
 
         console.log(`Player data for ${playerId}:`, playerData);
-        console.log(playerData.impactRating);
+        console.log(playerId);
+
+        const samplePlayerId: string = playerId;
+        const sampleUpdatedData: UpdatedData = {
+          rating: playerData.impactRating,
+        };
+
+        // Call handleUpdatePlayer with the sample data
+        handleUpdatePlayer(samplePlayerId, sampleUpdatedData, region);
+
         return playerData.impactRating;
       } else {
         console.log(`Player named ${playerId} not found in the spreadsheet.`);
