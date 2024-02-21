@@ -14,13 +14,13 @@ interface PlayerRatingData {
   impactRating: string;
 }
 
-async function getSpreadsheetValues(region: string, playerName: string) {
+async function getSpreadsheetValues(region: string, playerId: string) {
   const spreadsheetId = "13U3pfFnv7kvx6j5YdUs7lEu57V07QEPdFeFWjHO79v4";
   const range = region === "NA" ? "NA Ranks" : "EU Ranks";
   const dateTimeRenderOption = "FORMATTED_STRING";
   const majorDimension = "ROWS";
   const valueRenderOption = "FORMATTED_VALUE";
-  const apiKey = "AIzaSyACJKfpcLrOvyXD0KmuUbhEPAcEzNO7RZo"; // Replace with your actual API key
+  const apiKey = "AIzaSyACJKfpcLrOvyXD0KmuUbhEPAcEzNO7RZo";
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?dateTimeRenderOption=${dateTimeRenderOption}&majorDimension=${majorDimension}&valueRenderOption=${valueRenderOption}&key=${apiKey}`;
 
@@ -46,7 +46,7 @@ async function getSpreadsheetValues(region: string, playerName: string) {
       }
 
       const plrRow: string[] | undefined = values.find((row) =>
-        row[playerIndex]?.toLowerCase().includes(playerName.toLowerCase())
+        row[playerIndex]?.toLowerCase().includes(playerId.toLowerCase())
       );
 
       if (plrRow) {
@@ -56,11 +56,11 @@ async function getSpreadsheetValues(region: string, playerName: string) {
           impactRating: plrRow[headers.indexOf("Impact Rating")],
         };
 
-        console.log(`Player data for ${playerName}:`, playerData);
+        console.log(`Player data for ${playerId}:`, playerData);
         console.log(playerData.impactRating);
         return playerData.impactRating;
       } else {
-        console.log(`Player named ${playerName} not found in the spreadsheet.`);
+        console.log(`Player named ${playerId} not found in the spreadsheet.`);
         return undefined;
       }
     }
