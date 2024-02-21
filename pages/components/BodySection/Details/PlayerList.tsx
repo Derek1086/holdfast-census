@@ -40,16 +40,21 @@ import crazy from "./bioImages/crazy.png";
 import DankLee from "./bioImages/Danklee.png";
 import DannyG from "./bioImages/DannyG.png";
 import DarkGod from "./bioImages/DarkGod.png";
+import Darky from "./bioImages/Darky.png";
+import Die from "./bioImages/Die.png";
 import Davidgabri from "./bioImages/Davidgabri_28.png";
 import Dingus from "./bioImages/Dingus.jpg";
 import Doomer from "./bioImages/Doomer.png";
 import Dorri from "./bioImages/Dorri.png";
+import Downtime from "./bioImages/Downtime.png";
 import Duncan from "./bioImages/Duncan.png";
 import Ecko from "./bioImages/Ecko.png";
 import Ecual from "./bioImages/Ecual.png";
+import Fenol from "./bioImages/Fenol.png";
 import Felton from "./bioImages/Felton.png";
 import Fires from "./bioImages/Fires.png";
 import FoX from "./bioImages/FoX.png";
+import Foxanol from "./bioImages/Foxanol.jpg";
 import Frankiemcnutslap from "./bioImages/frankiemcnutslap.png";
 import Frewbay from "./bioImages/Frewbay.png";
 import FRIZI from "./bioImages/FRIZI.png";
@@ -75,6 +80,7 @@ import Jewourgie from "./bioImages/Jewourgie.png";
 import Josh from "./bioImages/Josh.png";
 import JulianVHipper from "./bioImages/JulianVHipper.png";
 import JUUL from "./bioImages/Juul.png";
+import kaczuszka from "./bioImages/kaczuszka.png";
 import Kalani from "./bioImages/Kalani.png";
 import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
 import Kasu from "./bioImages/Kasu.png";
@@ -85,6 +91,7 @@ import Koldsoe from "./bioImages/Koldsoe.png";
 import Lobcity from "./bioImages/Lobcity.png";
 import Lynx from "./bioImages/Lynx.png";
 import Madbox from "./bioImages/Madbox.png";
+import Maksim from "./bioImages/Maksim.jpg";
 import ManiakiAX from "./bioImages/ManiakiAX.png";
 import MattGS from "./bioImages/MattGS.png";
 import Mattrobes from "./bioImages/Mattrobes.png";
@@ -125,9 +132,11 @@ import VG from "./bioImages/VG.png";
 import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
 import WifiBills from "./bioImages/WifiBills.png";
+import Wilson from "./bioImages/Wilson.png";
 import Wink from "./bioImages/Wink.png";
 import yoenkong from "./bioImages/yoenkong.png";
 import ytug from "./bioImages/ytug.png";
+import Zahar from "./bioImages/Zahar.png";
 import Zakk from "./bioImages/Zakk.png";
 
 interface PlayerListProps {
@@ -260,10 +269,16 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Crashy;
         case "Davidgabri_28":
           return Davidgabri;
+        case "Darky":
+          return Darky;
+        case "Die":
+          return Die;
         case "Dingus":
           return Dingus;
         case "Doomer":
           return Doomer;
+        case "Downtime":
+          return Downtime;
         case "Dank Lee":
           return DankLee;
         case "Danny G":
@@ -282,6 +297,10 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Felton;
         case "Fenno":
           return Fenno;
+        case "Fenol":
+          return Fenol;
+        case "Foxanol":
+          return Foxanol;
         case "Fires":
           return Fires;
         case "FoX":
@@ -336,6 +355,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return JulianVHipper;
         case "JUUL":
           return JUUL;
+        case "kaczuszka":
+          return kaczuszka;
         case "Kalani":
           return Kalani;
         case "KaputBasket3192":
@@ -356,6 +377,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Lynx;
         case "Madbox":
           return Madbox;
+        case "Maksim":
+          return Maksim;
         case "Αχιλλέας":
           return ManiakiAX;
         case "MattGS":
@@ -436,12 +459,16 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Warden;
         case "Wifi Bills":
           return WifiBills;
+        case "Wilson":
+          return Wilson;
         case "Wînk":
           return Wink;
         case "ytug":
           return ytug;
         case "Yoenkong":
           return yoenkong;
+        case "Zahar":
+          return Zahar;
         case "Zakk":
           return Zakk;
 
