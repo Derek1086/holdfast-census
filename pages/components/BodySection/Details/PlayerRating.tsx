@@ -43,12 +43,16 @@ const handleUpdatePlayer = async (
 };
 
 async function getSpreadsheetValues(region: string, playerId: string) {
+  if (!process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY) {
+    console.log("no api key");
+    return undefined;
+  }
   const spreadsheetId = "13U3pfFnv7kvx6j5YdUs7lEu57V07QEPdFeFWjHO79v4";
   const range = region === "NA" ? "NA Ranks" : "EU Ranks";
   const dateTimeRenderOption = "FORMATTED_STRING";
   const majorDimension = "ROWS";
   const valueRenderOption = "FORMATTED_VALUE";
-  const apiKey = "AIzaSyACJKfpcLrOvyXD0KmuUbhEPAcEzNO7RZo";
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY;
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?dateTimeRenderOption=${dateTimeRenderOption}&majorDimension=${majorDimension}&valueRenderOption=${valueRenderOption}&key=${apiKey}`;
 
