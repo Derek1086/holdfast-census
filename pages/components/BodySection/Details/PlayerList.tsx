@@ -24,6 +24,24 @@ const PlayerList: React.FC<PlayerListProps> = ({
   const [sortedPlayers, setSortedPlayers] = useState<Player[]>([]);
   const [error, setError] = useState<string | null>(null);
 
+  const getAverageRating = () => {
+    if (sortedPlayers.length === 0) {
+      return 0;
+    }
+    const validRatings = sortedPlayers
+      .filter((player) => player.rating !== "")
+      .map((player) => parseFloat(player.rating));
+
+    if (validRatings.length === 0) {
+      return 0;
+    }
+
+    const totalRating = validRatings.reduce((sum, rating) => sum + rating, 0);
+    const averageRating = totalRating / validRatings.length;
+
+    return Number(averageRating.toFixed(2));
+  };
+
   useEffect(() => {
     try {
       const updatedSortedPlayers = [...playersInLocation].sort((a, b) => {
@@ -81,7 +99,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
               className={classes.sortButton}
               onClick={() => toggleSort("regiment")}
             >
-              Players - {sortedPlayers.length}
+              Players - {sortedPlayers.length} <br /> Average Rating:{" "}
+              {getAverageRating()}
             </button>
           </div>
           <div className={classes.playerList}>
