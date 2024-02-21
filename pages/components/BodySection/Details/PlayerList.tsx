@@ -7,12 +7,14 @@ import PlayerBio from "./PlayerBio";
 import { Player } from "../../..";
 
 interface PlayerListProps {
+  region: string;
   viewingPlayer: string;
   setViewingPlayer: (id: string) => void;
   playersInLocation: Player[];
 }
 
 const PlayerList: React.FC<PlayerListProps> = ({
+  region,
   viewingPlayer,
   setViewingPlayer,
   playersInLocation,
@@ -54,6 +56,7 @@ const PlayerList: React.FC<PlayerListProps> = ({
   if (viewingPlayer !== "") {
     return (
       <PlayerBio
+        region={region}
         player={viewingPlayer}
         playersInLocation={playersInLocation}
         setViewingPlayer={setViewingPlayer}

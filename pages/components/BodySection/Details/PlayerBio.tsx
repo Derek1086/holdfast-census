@@ -115,12 +115,14 @@ import Wink from "./bioImages/Wink.png";
 import ytug from "./bioImages/ytug.png";
 
 interface PlayerBioProps {
+  region: string;
   player: string;
   playersInLocation: Player[];
   setViewingPlayer: (id: string) => void;
 }
 
 const PlayerBio: React.FC<PlayerBioProps> = ({
+  region,
   player,
   playersInLocation,
   setViewingPlayer,
@@ -398,7 +400,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
                         className={classes.infoLocation}
                       >{`Average Impact Rating: None`}</div>
                     ) : (
-                      <PlayerRating player={foundPlayer} />
+                      <PlayerRating region={region} player={foundPlayer} />
                     )}
                   </div>
                   <div className={classes.location}>

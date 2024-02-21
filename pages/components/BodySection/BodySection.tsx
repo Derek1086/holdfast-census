@@ -50,6 +50,7 @@ const BodySection: React.FC<BodySectionProps> = ({
           <div className={classes.details}>
             {location !== "" ? (
               <PlayerList
+                region={region}
                 setViewingPlayer={setViewingPlayer}
                 viewingPlayer={viewingPlayer}
                 playersInLocation={playersInLocation}
