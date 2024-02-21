@@ -39,6 +39,7 @@ import Crashy from "./bioImages/Crashy.png";
 import crazy from "./bioImages/crazy.png";
 import DankLee from "./bioImages/Danklee.png";
 import DannyG from "./bioImages/DannyG.png";
+import DarkGod from "./bioImages/DarkGod.png";
 import Davidgabri from "./bioImages/Davidgabri_28.png";
 import Dingus from "./bioImages/Dingus.jpg";
 import Doomer from "./bioImages/Doomer.png";
@@ -51,6 +52,7 @@ import Fires from "./bioImages/Fires.png";
 import FoX from "./bioImages/FoX.png";
 import Frankiemcnutslap from "./bioImages/frankiemcnutslap.png";
 import Frewbay from "./bioImages/Frewbay.png";
+import FRIZI from "./bioImages/FRIZI.png";
 import Ghost from "./bioImages/Ghost.png";
 import Gendalf from "./bioImages/Gendalf.png";
 import Giveup from "./bioImages/Giveup.jpg";
@@ -70,6 +72,7 @@ import ItalianTurtle from "./bioImages/ItalianTurtle.png";
 import JaysonH from "./bioImages/JaysonH.png";
 import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
+import Josh from "./bioImages/Josh.png";
 import JulianVHipper from "./bioImages/JulianVHipper.png";
 import JUUL from "./bioImages/Juul.png";
 import Kalani from "./bioImages/Kalani.png";
@@ -97,6 +100,7 @@ import Paddy from "./bioImages/Paddy.png";
 import Peffryping from "./bioImages/peffryping.png";
 import Peprika from "./bioImages/Peprika.png";
 import Perc from "./bioImages/Perc.png";
+import Pikuli from "./bioImages/Pikuli.png";
 import Pilot from "./bioImages/Pilot.png";
 import Power from "./bioImages/Power.png";
 import PRC from "./bioImages/PRC.png";
@@ -124,6 +128,7 @@ import WifiBills from "./bioImages/WifiBills.png";
 import Wink from "./bioImages/Wink.png";
 import yoenkong from "./bioImages/yoenkong.png";
 import ytug from "./bioImages/ytug.png";
+import Zakk from "./bioImages/Zakk.png";
 
 interface PlayerListProps {
   region: string;
@@ -263,6 +268,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return DankLee;
         case "Danny G":
           return DannyG;
+        case "Dark God":
+          return DarkGod;
         case "Dorri":
           return Dorri;
         case "Duncan":
@@ -283,6 +290,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Frankiemcnutslap;
         case "Frewbay":
           return Frewbay;
+        case "FRIZI":
+          return FRIZI;
         case "Gendalf":
           return Gendalf;
         case "Giveup":
@@ -321,6 +330,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Jerry;
         case "Jewourgie":
           return Jewourgie;
+        case "Josh":
+          return Josh;
         case "JulianVHipper":
           return JulianVHipper;
         case "JUUL":
@@ -375,6 +386,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Peprika;
         case "Perc":
           return Perc;
+        case "Pikuli":
+          return Pikuli;
         case "Pilot":
           return Pilot;
         case "PRC":
@@ -429,6 +442,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return ytug;
         case "Yoenkong":
           return yoenkong;
+        case "Zakk":
+          return Zakk;
 
         default:
           return DefaultIcon;
