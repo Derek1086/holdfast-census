@@ -40,6 +40,7 @@ import crazy from "./bioImages/crazy.png";
 import DankLee from "./bioImages/Danklee.png";
 import DannyG from "./bioImages/DannyG.png";
 import Davidgabri from "./bioImages/Davidgabri_28.png";
+import Dingus from "./bioImages/Dingus.jpg";
 import Doomer from "./bioImages/Doomer.png";
 import Dorri from "./bioImages/Dorri.png";
 import Duncan from "./bioImages/Duncan.png";
@@ -254,6 +255,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Crashy;
         case "Davidgabri_28":
           return Davidgabri;
+        case "Dingus":
+          return Dingus;
         case "Doomer":
           return Doomer;
         case "Dank Lee":
