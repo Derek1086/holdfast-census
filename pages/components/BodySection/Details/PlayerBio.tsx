@@ -255,7 +255,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
         return Jerry;
       case "Jewourgie":
         return Jewourgie;
-      case "Julian v. Hipper":
+      case "JulianVHipper":
         return JulianVHipper;
       case "Kalani":
         return Kalani;
