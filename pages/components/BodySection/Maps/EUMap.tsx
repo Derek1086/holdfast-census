@@ -173,7 +173,7 @@ const EUMap: React.FC<EUMapProps> = ({
         onMouseUp={mouseUpHandler}
         onMouseLeave={mouseLeaveBoxHandler}
         height="95%"
-        width="105%"
+        width="115%"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g transform={`translate(${offset.x},${offset.y})`}>
