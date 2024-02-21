@@ -17,6 +17,7 @@ import Amy from "./bioImages/Amy.png";
 import August from "./bioImages/August.png";
 import Austro from "./bioImages/Austro.png";
 import BaconIsAwesome from "./bioImages/BaconIsAwesome.png";
+import Bahren from "./bioImages/Bahren.png";
 import Bandej from "./bioImages/Bandej.png";
 import Billjet from "./bioImages/Billjet.png";
 import Bliinx from "./bioImages/Bliinx.png";
@@ -27,6 +28,8 @@ import catboy from "./bioImages/catboy.png";
 import Cerb from "./bioImages/Cerb.png";
 import Charleslee from "./bioImages/Charleslee.png";
 import Charmy from "./bioImages/Charmy.png";
+import cheeraw from "./bioImages/cheeraw.png";
+import ChesterDroors from "./bioImages/ChesterDroors.png";
 import chrome from "./bioImages/chrome.png";
 import CL0UD from "./bioImages/CL0UD.png";
 import Clear from "./bioImages/Clear.png";
@@ -55,6 +58,8 @@ import Gryphon from "./bioImages/Gryphon.png";
 import Gustav from "./bioImages/Gustav.png";
 import Haines from "./bioImages/Haines.png";
 import Ed from "./bioImages/Ed.png";
+import emiboy from "./bioImages/emiboy.png";
+import Fenno from "./bioImages/Fenno.jpg";
 import Hellameme from "./bioImages/Hellameme.png";
 import Highlander from "./bioImages/Highlander.png";
 import Hotspot from "./bioImages/Hotspot.jpg";
@@ -65,12 +70,14 @@ import JaysonH from "./bioImages/JaysonH.png";
 import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
 import JulianVHipper from "./bioImages/JulianVHipper.png";
+import JUUL from "./bioImages/Juul.png";
 import Kalani from "./bioImages/Kalani.png";
 import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
 import Kasu from "./bioImages/Kasu.png";
 import Keth from "./bioImages/keth.png";
 import KillerShark from "./bioImages/KillerShark.png";
 import klawik from "./bioImages/klawik.png";
+import Koldsoe from "./bioImages/Koldsoe.png";
 import Lobcity from "./bioImages/Lobcity.png";
 import Lynx from "./bioImages/Lynx.png";
 import Madbox from "./bioImages/Madbox.png";
@@ -114,6 +121,7 @@ import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
 import WifiBills from "./bioImages/WifiBills.png";
 import Wink from "./bioImages/Wink.png";
+import yoenkong from "./bioImages/yoenkong.png";
 import ytug from "./bioImages/ytug.png";
 
 interface PlayerListProps {
@@ -204,6 +212,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Austro;
         case "Bacon Is Awesome":
           return BaconIsAwesome;
+        case "Bähren":
+          return Bahren;
         case "Bandej":
           return Bandej;
         case "BILLJET":
@@ -224,6 +234,10 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Charleslee;
         case "Charmy":
           return Charmy;
+        case "Chester Droors":
+          return ChesterDroors;
+        case "cheeraw":
+          return cheeraw;
         case "chrome":
           return chrome;
         case "CL0UD":
@@ -256,6 +270,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Ecual;
         case "Felton":
           return Felton;
+        case "Fenno":
+          return Fenno;
         case "Fires":
           return Fires;
         case "FoX":
@@ -282,6 +298,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Haines;
         case "Ed":
           return Ed;
+        case "Emiboy":
+          return emiboy;
         case "HellaMeme":
           return Hellameme;
         case "Highlander":
@@ -302,6 +320,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Jewourgie;
         case "JulianVHipper":
           return JulianVHipper;
+        case "JUUL":
+          return JUUL;
         case "Kalani":
           return Kalani;
         case "KaputBasket3192":
@@ -314,6 +334,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return KillerShark;
         case "klawik":
           return klawik;
+        case "Koldsoe":
+          return Koldsoe;
         case "Lobcity":
           return Lobcity;
         case "Lynx":
@@ -402,6 +424,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Wink;
         case "ytug":
           return ytug;
+        case "Yoenkong":
+          return yoenkong;
 
         default:
           return DefaultIcon;
