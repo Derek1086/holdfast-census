@@ -84,7 +84,7 @@ const EUMap: React.FC<EUMapProps> = ({
   };
 
   const zoomInHandler = () => {
-    if (zoomLevel > 0.5) {
+    if (zoomLevel > 0.1) {
       setZoomLevel((prevZoomLevel) => prevZoomLevel - 0.1);
     }
   };

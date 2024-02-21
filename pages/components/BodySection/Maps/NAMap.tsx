@@ -83,7 +83,7 @@ const NAMap: React.FC<NAMapProps> = ({
   };
 
   const zoomInHandler = () => {
-    if (zoomLevel > 0.5) {
+    if (zoomLevel > 0.1) {
       setZoomLevel((prevZoomLevel) => prevZoomLevel - 0.1);
     }
   };
