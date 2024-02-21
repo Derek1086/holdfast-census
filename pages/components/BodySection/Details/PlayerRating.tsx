@@ -34,6 +34,8 @@ const handleUpdatePlayer = async (
       console.log("Player data updated successfully");
     } else if (response.status === 404) {
       console.log("Player not found");
+    } else if (response.status === 204) {
+      console.log("No values were changed");
     } else {
       console.log("Internal Server Error");
     }
