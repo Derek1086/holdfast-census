@@ -99,7 +99,7 @@ const PlayerList: React.FC<PlayerListProps> = ({
               className={classes.sortButton}
               onClick={() => toggleSort("regiment")}
             >
-              Players - {sortedPlayers.length} <br /> Average Rating:{" "}
+              Players - {sortedPlayers.length} <br /> Average Impact Rating:{" "}
               {getAverageRating()}
             </button>
           </div>
