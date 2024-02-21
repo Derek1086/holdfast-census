@@ -6,3 +6,9 @@
   font-size: 0.8rem;
   margin-left: 10px;
 }
+
+@media (max-width: 1000px) {
+  .infoLocation {
+    font-size: 0.6rem;
+  }
+}
