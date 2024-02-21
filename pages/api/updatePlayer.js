@@ -23,9 +23,9 @@ export default async function handler(req, res) {
     );
 
     if (result.modifiedCount > 0) {
-      res.status(200).json({ message: "Player data updated successfully" });
+      res.status(201).json({ message: "Player data updated successfully" });
     } else {
-      res.status(204).json({ message: "No values were different" });
+      res.status(200).json({ message: "No values were different" });
     }
   } catch (error) {
     console.error(error);

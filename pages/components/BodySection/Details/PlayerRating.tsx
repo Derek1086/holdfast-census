@@ -30,11 +30,11 @@ const handleUpdatePlayer = async (
       region,
     });
 
-    if (response.status === 200) {
+    if (response.status === 201) {
       console.log("Player data updated successfully");
     } else if (response.status === 404) {
       console.log("Player not found");
-    } else if (response.status === 204) {
+    } else if (response.status === 200) {
       console.log("No values were changed");
     } else {
       console.log("Internal Server Error");
