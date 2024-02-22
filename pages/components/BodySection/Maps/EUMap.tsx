@@ -190,9 +190,26 @@ const EUMap: React.FC<EUMapProps> = ({
             fill={updateColorHandler("LI")}
             rx={10}
             ry={10}
-          ></rect>
+          />
           <text x={40} y={40} fill="black" fontFamily="Arial" fontSize="20">
             LI
+          </text>
+          <rect
+            x={10}
+            y={80}
+            height={50}
+            width={80}
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            onClick={mouseClickHandler}
+            id="DZ"
+            name="Algeria"
+            fill={updateColorHandler("DZ")}
+            rx={10}
+            ry={10}
+          />
+          <text x={35} y={110} fill="black" fontFamily="Arial" fontSize="20">
+            DZ
           </text>
           <path
             onMouseEnter={mouseEnterHandler}

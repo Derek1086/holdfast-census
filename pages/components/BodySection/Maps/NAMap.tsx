@@ -189,7 +189,7 @@ const NAMap: React.FC<NAMapProps> = ({
             fill={updateColorHandler("DC")}
             rx={10}
             ry={10}
-          ></rect>
+          />
           <text x={35} y={40} fill="black" fontFamily="Arial" fontSize="20">
             DC
           </text>

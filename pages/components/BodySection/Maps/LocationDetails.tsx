@@ -142,6 +142,7 @@ var EUREGIONS = [
   ["Cyprus", "CY"],
   ["Vatican City", "VA"],
   ["San Marino", "SM"],
+  ["Algeria", "DZ"],
 ];
 
 const LocationDetails: React.FC<LocationDetailsProps> = ({

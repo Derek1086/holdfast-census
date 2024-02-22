@@ -43,6 +43,7 @@ import DarkGod from "./bioImages/DarkGod.png";
 import Darky from "./bioImages/Darky.png";
 import Die from "./bioImages/Die.png";
 import Davidgabri from "./bioImages/Davidgabri_28.png";
+import Dayerino from "./bioImages/Dayerino.png";
 import Dingus from "./bioImages/Dingus.jpg";
 import Doomer from "./bioImages/Doomer.png";
 import Dorri from "./bioImages/Dorri.png";
@@ -275,6 +276,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Crashy;
         case "Davidgabri_28":
           return Davidgabri;
+        case "Dayerino":
+          return Dayerino;
         case "Darky":
           return Darky;
         case "Die":
