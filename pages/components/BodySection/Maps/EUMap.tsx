@@ -177,6 +177,23 @@ const EUMap: React.FC<EUMapProps> = ({
         xmlns="http://www.w3.org/2000/svg"
       >
         <g transform={`translate(${offset.x},${offset.y})`}>
+          <rect
+            x={10}
+            y={10}
+            height={50}
+            width={80}
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            onClick={mouseClickHandler}
+            id="LI"
+            name="Liechtenstein"
+            fill={updateColorHandler("LI")}
+            rx={10}
+            ry={10}
+          ></rect>
+          <text x={40} y={40} fill="black" fontFamily="Arial" fontSize="20">
+            LI
+          </text>
           <path
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}

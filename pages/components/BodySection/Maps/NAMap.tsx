@@ -176,6 +176,23 @@ const NAMap: React.FC<NAMapProps> = ({
         xmlns="http://www.w3.org/2000/svg"
       >
         <g transform={`translate(${offset.x},${offset.y})`}>
+          <rect
+            x={10}
+            y={10}
+            height={50}
+            width={80}
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            onClick={mouseClickHandler}
+            id="DC"
+            name="District of Columbia"
+            fill={updateColorHandler("DC")}
+            rx={10}
+            ry={10}
+          ></rect>
+          <text x={35} y={40} fill="black" fontFamily="Arial" fontSize="20">
+            DC
+          </text>
           <path
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
