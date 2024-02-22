@@ -48,6 +48,7 @@ import Doomer from "./bioImages/Doomer.png";
 import Dorri from "./bioImages/Dorri.png";
 import Downtime from "./bioImages/Downtime.png";
 import Duncan from "./bioImages/Duncan.png";
+import DURI from "./bioImages/DURI.png";
 import Ecko from "./bioImages/Ecko.png";
 import Ecual from "./bioImages/Ecual.png";
 import Fenol from "./bioImages/Fenol.png";
@@ -68,6 +69,7 @@ import Gustav from "./bioImages/Gustav.png";
 import Haines from "./bioImages/Haines.png";
 import Ed from "./bioImages/Ed.png";
 import emiboy from "./bioImages/emiboy.png";
+import Escobarchik from "./bioImages/Escobarchik.png";
 import Fenno from "./bioImages/Fenno.jpg";
 import Hellameme from "./bioImages/Hellameme.png";
 import Highlander from "./bioImages/Highlander.png";
@@ -108,6 +110,7 @@ import Paddy from "./bioImages/Paddy.png";
 import Peffryping from "./bioImages/peffryping.png";
 import Peprika from "./bioImages/Peprika.png";
 import Perc from "./bioImages/Perc.png";
+import PerrCepTiion from "./bioImages/PerrCepTiion.jpg";
 import Pikuli from "./bioImages/Pikuli.png";
 import Pilot from "./bioImages/Pilot.png";
 import Power from "./bioImages/Power.png";
@@ -120,6 +123,7 @@ import Shane from "./bioImages/Shane.png";
 import Shmadie from "./bioImages/Shmadie.png";
 import Sock from "./bioImages/Sock.png";
 import Spicypaper from "./bioImages/Spicypaper.png";
+import Spongeboob from "./bioImages/Spongeboob.png";
 import Stryker from "./bioImages/Stryker.png";
 import Svenypoo from "./bioImages/Svenypoo.png";
 import Thad from "./bioImages/Thad.png";
@@ -132,6 +136,7 @@ import Turtles from "./bioImages/Turtles.png";
 import VG from "./bioImages/VG.png";
 import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
+import Wodlapato from "./bioImages/Wodlapato.png";
 import WifiBills from "./bioImages/WifiBills.png";
 import Wilson from "./bioImages/Wilson.png";
 import Wink from "./bioImages/Wink.png";
@@ -290,10 +295,14 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Dorri;
         case "Duncan":
           return Duncan;
+        case "DURI":
+          return DURI;
         case "Ecko":
           return Ecko;
         case "Ecual":
           return Ecual;
+        case "Escobarchik":
+          return Escobarchik;
         case "Felton":
           return Felton;
         case "Fenno":
@@ -412,6 +421,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Peprika;
         case "Perc":
           return Perc;
+        case "PerrCepTiion":
+          return PerrCepTiion;
         case "Pikuli":
           return Pikuli;
         case "Pilot":
@@ -436,6 +447,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Sock;
         case "Spicypaper":
           return Spicypaper;
+        case "Spongeboob":
+          return Spongeboob;
         case "Stryker":
           return Stryker;
         case "Svenypoo":
@@ -460,6 +473,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return VG;
         case "Warden":
           return Warden;
+        case "Wodlapato":
+          return Wodlapato;
         case "Wifi Bills":
           return WifiBills;
         case "Wilson":
