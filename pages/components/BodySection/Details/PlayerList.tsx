@@ -283,7 +283,7 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return DankLee;
         case "Danny G":
           return DannyG;
-        case "Dark God":
+        case "DarkGod":
           return DarkGod;
         case "Dorri":
           return Dorri;
