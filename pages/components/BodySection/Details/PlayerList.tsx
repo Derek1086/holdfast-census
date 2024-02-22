@@ -62,6 +62,7 @@ import Ghost from "./bioImages/Ghost.png";
 import Gendalf from "./bioImages/Gendalf.png";
 import Giveup from "./bioImages/Giveup.jpg";
 import GreenDan from "./bioImages/GreenDan.png";
+import Grumbler from "./bioImages/Grumbler.png";
 import Gryphon from "./bioImages/Gryphon.png";
 import Gustav from "./bioImages/Gustav.png";
 import Haines from "./bioImages/Haines.png";
@@ -319,6 +320,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Ghost;
         case "Green Dan":
           return GreenDan;
+        case "Grumbler":
+          return Grumbler;
         case "Gryphon":
           return Gryphon;
         case "GHO5T":
