@@ -76,6 +76,7 @@ import Hellameme from "./bioImages/Hellameme.png";
 import Highlander from "./bioImages/Highlander.png";
 import Hotspot from "./bioImages/Hotspot.jpg";
 import Incapablo from "./bioImages/Incapablo.png";
+import Irishman from "./bioImages/Irishman.png";
 import Inglorian from "./bioImages/Inglorian.png";
 import ItalianTurtle from "./bioImages/ItalianTurtle.png";
 import JaysonH from "./bioImages/JaysonH.png";
@@ -107,6 +108,7 @@ import NDK from "./bioImages/NDK.jpg";
 import Nine from "./bioImages/Nine.png";
 import Notacoolguy from "./bioImages/Notacoolguy.png";
 import Okaykoay from "./bioImages/Okaykoay.png";
+import p1xrr from "./bioImages/p1xrr.png";
 import Paddy from "./bioImages/Paddy.png";
 import Peffryping from "./bioImages/peffryping.png";
 import Peprika from "./bioImages/Peprika.png";
@@ -118,8 +120,10 @@ import Power from "./bioImages/Power.png";
 import PRC from "./bioImages/PRC.png";
 import Rave from "./bioImages/Rave.png";
 import Reddishh from "./bioImages/Reddishh.png";
+import Rekt from "./bioImages/Rekt.png";
 import Robo from "./bioImages/Robo.png";
 import Russell from "./bioImages/russell.png";
+import Ryan from "./bioImages/Ryan.png";
 import Shane from "./bioImages/Shane.png";
 import Shmadie from "./bioImages/Shmadie.png";
 import Sock from "./bioImages/Sock.png";
@@ -132,6 +136,7 @@ import TheDutchMan from "./bioImages/TheDutchMan.png";
 import Tigo from "./bioImages/Tigo.png";
 import Toasted from "./bioImages/toasted.png";
 import ToasterCoaster from "./bioImages/ToasterCoaster.png";
+import Tomisek from "./bioImages/Tomisek.png";
 import Trainboy from "./bioImages/Trainboy.png";
 import Turtles from "./bioImages/Turtles.png";
 import VG from "./bioImages/VG.png";
@@ -354,6 +359,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Hotspot;
         case "Incapablo":
           return Incapablo;
+        case "IrishMan":
+          return Irishman;
         case "Inglorian":
           return Inglorian;
         case "Italian Turtle":
@@ -416,6 +423,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Notacoolguy;
         case "Okaykoay":
           return Okaykoay;
+        case "p1xrr":
+          return p1xrr;
         case "Paddy":
           return Paddy;
         case "peffry ping":
@@ -440,6 +449,10 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Reddishh;
         case "russell":
           return Russell;
+        case "Rekt":
+          return Rekt;
+        case "Ryan":
+          return Ryan;
         case "Robo":
           return Robo;
         case "Shane":
@@ -466,6 +479,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Toasted;
         case "ToasterCoaster":
           return ToasterCoaster;
+        case "Tomisek3":
+          return Tomisek;
         case "Trainboy":
           return Trainboy;
         case "Turtles":

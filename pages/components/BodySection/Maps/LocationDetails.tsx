@@ -149,7 +149,6 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
   region,
   selectedLocation,
 }) => {
-  // Handle undefined region
   if (!region) {
     return <></>;
   }
@@ -157,7 +156,6 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
 
   const convertRegion = (input: string, to: string) => {
     if (!input || !to) {
-      // Handle missing input or conversion type
       return "Invalid input or conversion type";
     }
 
@@ -171,7 +169,6 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
       if (matchingRegion) {
         return matchingRegion[1];
       } else {
-        // Handle case where no matching region is found
         return "Unknown region";
       }
     } else if (to === "TO_NAME") {
@@ -181,12 +178,10 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
       if (matchingRegion) {
         return matchingRegion[0];
       } else {
-        // Handle case where no matching region is found
         return "Unknown region";
       }
     }
 
-    // Handle unknown conversion type
     return "Invalid conversion type";
   };
 
