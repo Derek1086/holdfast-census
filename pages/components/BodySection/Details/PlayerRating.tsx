@@ -98,7 +98,6 @@ async function getSpreadsheetValues(region: string, playerId: string) {
           rating: playerData.impactRating,
         };
 
-        // Call handleUpdatePlayer with the sample data
         handleUpdatePlayer(samplePlayerId, sampleUpdatedData, region);
 
         return playerData.impactRating;
