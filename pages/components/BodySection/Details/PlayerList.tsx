@@ -21,6 +21,7 @@ import Bahren from "./bioImages/Bahren.png";
 import Bandej from "./bioImages/Bandej.png";
 import Billjet from "./bioImages/Billjet.png";
 import Bliinx from "./bioImages/Bliinx.png";
+import Blondiii from "./bioImages/Blondiii.png";
 import Brax from "./bioImages/Brax.png";
 import bushlinebyrant from "./bioImages/bushlinebyrant.png";
 import Buxa from "./bioImages/Buxa.png";
@@ -64,6 +65,7 @@ import Ghost from "./bioImages/Ghost.png";
 import Gendalf from "./bioImages/Gendalf.png";
 import Giveup from "./bioImages/Giveup.jpg";
 import GreenDan from "./bioImages/GreenDan.png";
+import Gimli from "./bioImages/Gimli.png";
 import Grumbler from "./bioImages/Grumbler.png";
 import Gryphon from "./bioImages/Gryphon.png";
 import Gustav from "./bioImages/Gustav.png";
@@ -247,6 +249,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Billjet;
         case "Bliinx":
           return Bliinx;
+        case "Blondiii":
+          return Blondiii;
         case "Brax":
           return Brax;
         case "bushlinebyrant":
@@ -345,6 +349,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Ghost;
         case "Gustav":
           return Gustav;
+        case "Gimli":
+          return Gimli;
         case "Haines":
           return Haines;
         case "Ed":
