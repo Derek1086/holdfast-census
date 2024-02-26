@@ -113,7 +113,7 @@ import Okaykoay from "./bioImages/Okaykoay.png";
 import p1xrr from "./bioImages/p1xrr.png";
 import Paddy from "./bioImages/Paddy.png";
 import Peffryping from "./bioImages/peffryping.png";
-import Peprika from "./bioImages/Peprika.png";
+import Peprika from "./bioImages/Peprika.jpg";
 import Perc from "./bioImages/Perc.png";
 import PerrCepTiion from "./bioImages/PerrCepTiion.jpg";
 import Pikuli from "./bioImages/Pikuli.png";
