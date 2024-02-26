@@ -103,6 +103,7 @@ import ManiakiAX from "./bioImages/ManiakiAX.png";
 import MattGS from "./bioImages/MattGS.png";
 import Mattrobes from "./bioImages/Mattrobes.png";
 import MilkMan from "./bioImages/MilkMan.png";
+import Milosz from "./bioImages/Milosz.png";
 import moxeetwo from "./bioImages/moxeetwo.png";
 import Muszy from "./bioImages/Muszy.png";
 import NoahMcMoney from "./bioImages/NoahMcMoney.png";
@@ -415,6 +416,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Mattrobes;
         case "The Milk Man":
           return MilkMan;
+        case "Milosz":
+          return Milosz;
         case "moxeetwo":
           return moxeetwo;
         case "Muszy":
