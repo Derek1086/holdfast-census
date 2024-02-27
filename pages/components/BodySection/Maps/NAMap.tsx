@@ -6,12 +6,14 @@ interface NAMapProps {
   setSelectedLocation: (location: string) => void;
   setViewingPlayer: (id: string) => void;
   regionalPlayers: RegionData | undefined;
+  setFilteredPlayers: (id: string) => void;
 }
 
 const NAMap: React.FC<NAMapProps> = ({
   setSelectedLocation,
   setViewingPlayer,
   regionalPlayers,
+  setFilteredPlayers,
 }) => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
@@ -42,6 +44,7 @@ const NAMap: React.FC<NAMapProps> = ({
     const target = event.target as SVGPathElement;
     setSelectedLocation(target.id);
     setViewingPlayer("");
+    setFilteredPlayers("");
   };
 
   const updateColorHandler = (path: string) => {

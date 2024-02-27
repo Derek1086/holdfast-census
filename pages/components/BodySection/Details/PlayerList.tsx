@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from "./PlayerList.module.css";
 
-import NoData from "./NoData";
 import PlayerItem from "./PlayerItem";
 import PlayerBio from "./PlayerBio";
 import { Player } from "../../..";
@@ -159,6 +158,8 @@ interface PlayerListProps {
   viewingPlayer: string;
   setViewingPlayer: (id: string) => void;
   playersInLocation: Player[];
+  location: string;
+  searchedPlayers: Player[] | null;
 }
 
 const PlayerList: React.FC<PlayerListProps> = ({
@@ -166,11 +167,12 @@ const PlayerList: React.FC<PlayerListProps> = ({
   viewingPlayer,
   setViewingPlayer,
   playersInLocation,
+  location,
+  searchedPlayers,
 }) => {
   const [sortBy, setSortBy] = useState<"name" | "regiment">("name");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [sortedPlayers, setSortedPlayers] = useState<Player[]>([]);
-  const [error, setError] = useState<string | null>(null);
 
   const getAverageRating = () => {
     if (sortedPlayers.length === 0) {
@@ -191,32 +193,37 @@ const PlayerList: React.FC<PlayerListProps> = ({
   };
 
   useEffect(() => {
-    try {
-      const updatedSortedPlayers = [...playersInLocation].sort((a, b) => {
-        if (sortBy === "name") {
-          return sortOrder === "asc"
-            ? a.name.localeCompare(b.name)
-            : b.name.localeCompare(a.name);
-        } else if (sortBy === "regiment") {
-          return sortOrder === "asc"
-            ? a.regiment.localeCompare(b.regiment)
-            : b.regiment.localeCompare(a.regiment);
-        }
-        return 0;
+    if (searchedPlayers && location === "") {
+      const updatedSortedPlayers = [...searchedPlayers].sort((a, b) => {
+        return sortOrder === "asc"
+          ? a.regiment.localeCompare(b.regiment)
+          : b.regiment.localeCompare(a.regiment);
       });
 
       setSortedPlayers(updatedSortedPlayers);
-      setError(null); // Reset error state if successful
-    } catch (error) {
-      setError("An error occurred while sorting players."); // Set error state if there's an error
-    }
-  }, [playersInLocation, sortBy, sortOrder]);
+    } else {
+      const updatedSortedPlayers = [...playersInLocation].sort((a, b) => {
+        return sortOrder === "asc"
+          ? a.regiment.localeCompare(b.regiment)
+          : b.regiment.localeCompare(a.regiment);
+      });
 
-  const toggleSort = (criteria: "name" | "regiment") => {
+      setSortedPlayers(updatedSortedPlayers);
+    }
+  }, [playersInLocation, sortBy, sortOrder, searchedPlayers, location]);
+
+  const toggleSort = (arr: Player[]) => {
     setSortOrder((prevOrder) =>
-      sortBy === criteria ? (prevOrder === "asc" ? "desc" : "asc") : "asc"
+      sortBy === "regiment" ? (prevOrder === "asc" ? "desc" : "asc") : "asc"
     );
-    setSortBy(criteria);
+    setSortBy("regiment");
+    const updatedSortedPlayers = [...arr].sort((a, b) => {
+      return sortOrder === "asc"
+        ? a.regiment.localeCompare(b.regiment)
+        : b.regiment.localeCompare(a.regiment);
+    });
+
+    setSortedPlayers(updatedSortedPlayers);
   };
 
   if (viewingPlayer !== "") {
@@ -526,7 +533,7 @@ const PlayerList: React.FC<PlayerListProps> = ({
         iconImg={findImage(viewingPlayer)}
         region={region}
         player={viewingPlayer}
-        playersInLocation={playersInLocation}
+        playersInLocation={searchedPlayers}
         setViewingPlayer={setViewingPlayer}
       />
     );
@@ -534,38 +541,30 @@ const PlayerList: React.FC<PlayerListProps> = ({
 
   return (
     <React.Fragment>
-      {error ? (
-        <div className={classes.errorContainer}>
-          <p className={classes.errorText}>{error}</p>
+      <div className={classes.listContainer}>
+        <div className={classes.buttonContainer}>
+          <button
+            style={{
+              borderTopLeftRadius: "5px",
+              borderTopRightRadius: "5px",
+            }}
+            className={classes.sortButton}
+            onClick={() => toggleSort(sortedPlayers)}
+          >
+            Players - {sortedPlayers.length} <br /> Average Impact Rating:{" "}
+            {getAverageRating()}
+          </button>
         </div>
-      ) : sortedPlayers.length > 0 ? (
-        <div className={classes.listContainer}>
-          <div className={classes.buttonContainer}>
-            <button
-              style={{
-                borderTopLeftRadius: "5px",
-                borderTopRightRadius: "5px",
-              }}
-              className={classes.sortButton}
-              onClick={() => toggleSort("regiment")}
-            >
-              Players - {sortedPlayers.length} <br /> Average Impact Rating:{" "}
-              {getAverageRating()}
-            </button>
-          </div>
-          <div className={classes.playerList}>
-            {sortedPlayers.map((player) => (
-              <PlayerItem
-                key={player.id}
-                player={player}
-                setViewingPlayer={setViewingPlayer}
-              />
-            ))}
-          </div>
+        <div className={classes.playerList}>
+          {sortedPlayers.map((player) => (
+            <PlayerItem
+              key={player.id}
+              player={player}
+              setViewingPlayer={setViewingPlayer}
+            />
+          ))}
         </div>
-      ) : (
-        <NoData />
-      )}
+      </div>
     </React.Fragment>
   );
 };

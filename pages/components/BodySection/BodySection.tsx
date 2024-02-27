@@ -14,6 +14,10 @@ interface BodySectionProps {
   viewingPlayer: string;
   regionalPlayers: RegionData | undefined;
   playersInLocation: Player[];
+  filteredPlayers: string;
+  setFilteredPlayers: (id: string) => void;
+  searchHandler: (input: string) => void;
+  searchedPlayers: Player[] | null;
 }
 
 const BodySection: React.FC<BodySectionProps> = ({
@@ -24,6 +28,10 @@ const BodySection: React.FC<BodySectionProps> = ({
   viewingPlayer,
   regionalPlayers,
   playersInLocation,
+  filteredPlayers,
+  setFilteredPlayers,
+  searchHandler,
+  searchedPlayers,
 }) => {
   return (
     <div className={classes.bodyContainer}>
@@ -33,31 +41,38 @@ const BodySection: React.FC<BodySectionProps> = ({
             setSelectedLocation={setLocation}
             setViewingPlayer={setViewingPlayer}
             regionalPlayers={regionalPlayers}
+            setFilteredPlayers={setFilteredPlayers}
           />
         ) : (
           <EUMap
             setSelectedLocation={setLocation}
             setViewingPlayer={setViewingPlayer}
             regionalPlayers={regionalPlayers}
+            setFilteredPlayers={setFilteredPlayers}
           />
         )}
       </div>
       <div className={classes.locationContainer}>
         <div className={classes.detailContainer}>
-          <h2 className={classes.locationTitle}>
-            <LocationDetails region={region} selectedLocation={location} />
-          </h2>
+          <h3 className={classes.locationTitle}>
+            <LocationDetails
+              region={region}
+              selectedLocation={location}
+              filteredPlayers={filteredPlayers}
+              setFilteredPlayers={setFilteredPlayers}
+              setLocation={setLocation}
+              searchHandler={searchHandler}
+            />
+          </h3>
           <div className={classes.details}>
-            {location !== "" ? (
-              <PlayerList
-                region={region}
-                setViewingPlayer={setViewingPlayer}
-                viewingPlayer={viewingPlayer}
-                playersInLocation={playersInLocation}
-              />
-            ) : (
-              <></>
-            )}
+            <PlayerList
+              region={region}
+              setViewingPlayer={setViewingPlayer}
+              viewingPlayer={viewingPlayer}
+              playersInLocation={playersInLocation}
+              location={location}
+              searchedPlayers={searchedPlayers}
+            />
           </div>
         </div>
       </div>

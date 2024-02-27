@@ -6,12 +6,14 @@ interface EUMapProps {
   setSelectedLocation: (location: string) => void;
   setViewingPlayer: (id: string) => void;
   regionalPlayers: RegionData | undefined;
+  setFilteredPlayers: (id: string) => void;
 }
 
 const EUMap: React.FC<EUMapProps> = ({
   setSelectedLocation,
   setViewingPlayer,
   regionalPlayers,
+  setFilteredPlayers,
 }) => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
@@ -43,6 +45,7 @@ const EUMap: React.FC<EUMapProps> = ({
     //console.log(target.id);
     setSelectedLocation(target.id);
     setViewingPlayer("");
+    setFilteredPlayers("");
   };
 
   const updateColorHandler = (path: string) => {

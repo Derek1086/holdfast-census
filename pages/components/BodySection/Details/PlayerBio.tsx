@@ -2,13 +2,14 @@ import React from "react";
 import classes from "./PlayerBio.module.css";
 import { Player } from "../../..";
 import PlayerRating from "./PlayerRating";
+import NoData from "./NoData";
 
 import Image, { StaticImageData } from "next/image";
 
 interface PlayerBioProps {
   region: string;
   player: string;
-  playersInLocation: Player[];
+  playersInLocation: Player[] | null;
   setViewingPlayer: (id: string) => void;
   iconImg: StaticImageData;
 }
@@ -95,7 +96,7 @@ const PlayerBio: React.FC<PlayerBioProps> = ({
             </div>
           </>
         ) : (
-          <div className={classes.error}>Player not found</div>
+          <NoData />
         )}
       </div>
     </div>

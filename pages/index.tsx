@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import clientPromise from "../lib/mongodb";
 import HeaderSection from "./components/HeaderSection/HeaderSection";
 import BodySection from "./components/BodySection/BodySection";
@@ -85,6 +85,8 @@ const Home: React.FC<Props> = ({ players }) => {
   const [region, setRegion] = useState<string>("NA");
   const [location, setLocation] = useState<string>("");
   const [viewingPlayer, setViewingPlayer] = useState<string>("");
+  const [filteredPlayers, setFilteredPlayers] = useState<string>("");
+  const [searchedPlayers, setSearchedPlayers] = useState<Player[] | null>(null);
 
   const updateRegionHandler = () => {
     setRegion((prevRegion) => (prevRegion === "NA" ? "EU" : "NA"));
@@ -102,11 +104,36 @@ const Home: React.FC<Props> = ({ players }) => {
     ? regionalPlayers.players.filter((player) => player.state === location)
     : [];
 
+  useEffect(() => {
+    if (regionalPlayers && regionalPlayers.players) {
+      const initialSearchedPlayers = regionalPlayers.players;
+      setSearchedPlayers(initialSearchedPlayers);
+    }
+  }, [regionalPlayers, setSearchedPlayers]);
+
+  const searchHandler = (text: string) => {
+    if (text === "" && regionalPlayers && regionalPlayers.players) {
+      setSearchedPlayers(regionalPlayers.players);
+    }
+    if (regionalPlayers && regionalPlayers.players) {
+      const searchResults = regionalPlayers.players.filter(
+        (player: Player) =>
+          player.name.toLowerCase().includes(text) ||
+          player.regiment.toLowerCase().includes(text)
+      );
+      setSearchedPlayers(searchResults);
+    }
+  };
+
   return (
     <React.Fragment>
       <title>Holdfast Melee Census</title>
       <link rel="icon" href="/favicon.ico" />
-      <HeaderSection updateRegion={updateRegionHandler} region={region} />
+      <HeaderSection
+        updateRegion={updateRegionHandler}
+        region={region}
+        setFilteredPlayers={setFilteredPlayers}
+      />
       <BodySection
         region={region}
         location={location}
@@ -115,6 +142,10 @@ const Home: React.FC<Props> = ({ players }) => {
         viewingPlayer={viewingPlayer}
         regionalPlayers={regionalPlayers}
         playersInLocation={playersInLocation}
+        filteredPlayers={filteredPlayers}
+        setFilteredPlayers={setFilteredPlayers}
+        searchHandler={searchHandler}
+        searchedPlayers={searchedPlayers}
       />
     </React.Fragment>
   );
