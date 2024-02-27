@@ -8,6 +8,7 @@ interface LocationDetailsProps {
   setFilteredPlayers: (id: string) => void;
   setLocation: (newLocation: string) => void;
   searchHandler: (input: string) => void;
+  setViewingPlayer: (id: string) => void;
 }
 
 var NAREGIONS = [
@@ -157,6 +158,7 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
   setFilteredPlayers,
   setLocation,
   searchHandler,
+  setViewingPlayer,
 }) => {
   if (!region) {
     return <></>;
@@ -197,6 +199,7 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
   const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilteredPlayers(event.target.value);
     setLocation("");
+    setViewingPlayer("");
     searchHandler(event.target.value);
   };
 

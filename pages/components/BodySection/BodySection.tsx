@@ -62,6 +62,7 @@ const BodySection: React.FC<BodySectionProps> = ({
               setFilteredPlayers={setFilteredPlayers}
               setLocation={setLocation}
               searchHandler={searchHandler}
+              setViewingPlayer={setViewingPlayer}
             />
           </h3>
           <div className={classes.details}>

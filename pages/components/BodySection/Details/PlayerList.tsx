@@ -533,7 +533,7 @@ const PlayerList: React.FC<PlayerListProps> = ({
         iconImg={findImage(viewingPlayer)}
         region={region}
         player={viewingPlayer}
-        playersInLocation={searchedPlayers}
+        playersInLocation={sortedPlayers}
         setViewingPlayer={setViewingPlayer}
       />
     );
