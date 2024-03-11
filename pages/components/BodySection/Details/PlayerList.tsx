@@ -53,6 +53,7 @@ import DURI from "./bioImages/DURI.png";
 import Ecko from "./bioImages/Ecko.png";
 import Ecual from "./bioImages/Ecual.png";
 import Fenol from "./bioImages/Fenol.png";
+import Eisbar from "./bioImages/Eisbar.png";
 import Felton from "./bioImages/Felton.png";
 import Fires from "./bioImages/Fires.png";
 import FoX from "./bioImages/FoX.png";
@@ -117,6 +118,7 @@ import Peprika from "./bioImages/Peprika.jpg";
 import Perc from "./bioImages/Perc.png";
 import PerrCepTiion from "./bioImages/PerrCepTiion.jpg";
 import Pikuli from "./bioImages/Pikuli.png";
+import Peop from "./bioImages/Poep.png";
 import Pilot from "./bioImages/Pilot.png";
 import Power from "./bioImages/Power.png";
 import PRC from "./bioImages/PRC.png";
@@ -329,6 +331,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Fenno;
         case "Fenol":
           return Fenol;
+        case "E1sbär":
+          return Eisbar;
         case "Foxanol":
           return Foxanol;
         case "Fires":
@@ -445,6 +449,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Paddy;
         case "peffry ping":
           return Peffryping;
+        case "ノア":
+          return Peop;
         case "Peprika":
           return Peprika;
         case "Perc":
