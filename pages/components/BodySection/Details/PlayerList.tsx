@@ -82,6 +82,7 @@ import Irishman from "./bioImages/Irishman.png";
 import Inglorian from "./bioImages/Inglorian.png";
 import ItalianTurtle from "./bioImages/ItalianTurtle.png";
 import JaysonH from "./bioImages/JaysonH.png";
+import Janfrii from "./bioImages/Janfrii.png";
 import Jerry from "./bioImages/Jerry.png";
 import Jewourgie from "./bioImages/Jewourgie.png";
 import Josh from "./bioImages/Josh.png";
@@ -386,6 +387,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return ItalianTurtle;
         case "JaysonH":
           return JaysonH;
+        case "Janfrii":
+          return Janfrii;
         case "Jerry":
           return Jerry;
         case "Jewourgie":
