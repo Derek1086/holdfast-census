@@ -90,6 +90,7 @@ import JulianVHipper from "./bioImages/JulianVHipper.png";
 import JUUL from "./bioImages/Juul.png";
 import kaczuszka from "./bioImages/kaczuszka.png";
 import Kalani from "./bioImages/Kalani.png";
+import Ken from "./bioImages/Ken.png";
 import KaputBasket3192 from "./bioImages/KaputBasket3192.png";
 import Kasu from "./bioImages/Kasu.png";
 import Keth from "./bioImages/keth.png";
@@ -101,6 +102,7 @@ import Lynx from "./bioImages/Lynx.png";
 import Madbox from "./bioImages/Madbox.png";
 import Maksim from "./bioImages/Maksim.jpg";
 import ManiakiAX from "./bioImages/ManiakiAX.png";
+import Mathieu from "./bioImages/mathieuwollenberg.png";
 import MattGS from "./bioImages/MattGS.png";
 import Mattrobes from "./bioImages/Mattrobes.png";
 import MilkMan from "./bioImages/MilkMan.png";
@@ -409,6 +411,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Kasu;
         case "keth":
           return Keth;
+        case "Ken":
+          return Ken;
         case "KillerShark":
           return KillerShark;
         case "klawik":
@@ -443,6 +447,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Nine;
         case "Noah McMoney":
           return NoahMcMoney;
+        case "Mathieu von W.":
+          return Mathieu;
         case "Noah":
           return NDK;
         case "Notacoolguy":
