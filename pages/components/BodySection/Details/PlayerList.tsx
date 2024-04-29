@@ -117,6 +117,7 @@ import Notacoolguy from "./bioImages/Notacoolguy.png";
 import Okaykoay from "./bioImages/Okaykoay.png";
 import p1xrr from "./bioImages/p1xrr.png";
 import Paddy from "./bioImages/Paddy.png";
+import Pachinko from "./bioImages/Pachinko.png";
 import Peffryping from "./bioImages/peffryping.png";
 import Peprika from "./bioImages/Peprika.jpg";
 import Perc from "./bioImages/Perc.png";
@@ -459,6 +460,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return p1xrr;
         case "Paddy":
           return Paddy;
+        case "Pachinko":
+          return Pachinko;
         case "peffry ping":
           return Peffryping;
         case "ノア":
