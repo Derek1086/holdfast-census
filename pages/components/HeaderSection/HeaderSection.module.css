@@ -1,8 +1,12 @@
 .container {
+  background-color: #272727;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-family: sans-serif;
+  padding: 5px 10px;
 }
 
 .titleContainer {
@@ -10,7 +14,7 @@
 }
 
 .title {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .searchContainer {
@@ -18,10 +22,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .searchBar {
   width: 60%;
+  height: 100%;
+}
+
+.search {
+  width: 100%;
+  background-color: #474747;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 100%;
+  padding: 10px;
 }
 
 .menuContainer {
@@ -37,6 +53,19 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+}
+
+.btn {
+  background-color: #ce93d8;
+  border: none;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b236c8;
 }
 
 @media screen and (max-width: 768px) {

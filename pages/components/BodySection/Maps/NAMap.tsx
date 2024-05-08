@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import { RegionData } from "../../..";
 
 import classes from "./NAMap.module.css";
@@ -142,15 +141,9 @@ const NAMap: React.FC<NAMapProps> = ({
     <>
       <div className={classes.buttonContainer}>
         <div className={classes.btns}>
-          <Button variant="text" color="secondary" onClick={zoomInHandler}>
-            Zoom In
-          </Button>
-          <Button variant="text" color="secondary" onClick={zoomOutHandler}>
-            Zoom Out
-          </Button>
-          <Button variant="text" color="secondary" onClick={resetZoomHandler}>
-            Reset
-          </Button>
+          <button onClick={zoomInHandler}>Zoom In</button>
+          <button onClick={zoomOutHandler}>Zoom Out</button>
+          <button onClick={resetZoomHandler}>Reset</button>
         </div>
         <div className={classes.legendContainer}>
           <div className={classes.legend}>

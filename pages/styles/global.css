@@ -18,3 +18,9 @@ html::-webkit-scrollbar-thumb:hover {
 html::-webkit-scrollbar-track {
   background-color: #36393f;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}

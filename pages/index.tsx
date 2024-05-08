@@ -1,18 +1,8 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import clientPromise from "../lib/mongodb";
 import HeaderSection from "./components/HeaderSection/HeaderSection";
 import BodySection from "./components/BodySection/BodySection";
 import { GetStaticProps } from "next";
-
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
 
 export type Player = {
   id: string;
@@ -136,8 +126,7 @@ const Home: React.FC<Props> = ({ players }) => {
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
+    <>
       <title>Holdfast Melee Census</title>
       <link rel="icon" href="/favicon.ico" />
       <HeaderSection
@@ -160,7 +149,7 @@ const Home: React.FC<Props> = ({ players }) => {
         setFilteredPlayers={setFilteredPlayers}
         searchedPlayers={searchedPlayers}
       />
-    </ThemeProvider>
+    </>
   );
 };
 
