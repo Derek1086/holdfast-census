@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
 import { RegionData } from "../../..";
+
 import classes from "./EUMap.module.css";
 
 interface EUMapProps {
@@ -140,15 +142,15 @@ const EUMap: React.FC<EUMapProps> = ({
     <>
       <div className={classes.buttonContainer}>
         <div className={classes.btns}>
-          <button className={classes.btn} onClick={zoomInHandler}>
+          <Button variant="text" color="secondary" onClick={zoomInHandler}>
             Zoom In
-          </button>
-          <button className={classes.btn} onClick={zoomOutHandler}>
+          </Button>
+          <Button variant="text" color="secondary" onClick={zoomOutHandler}>
             Zoom Out
-          </button>
-          <button className={classes.btn} onClick={resetZoomHandler}>
+          </Button>
+          <Button variant="text" color="secondary" onClick={resetZoomHandler}>
             Reset
-          </button>
+          </Button>
         </div>
         <div className={classes.legendContainer}>
           <div className={classes.legend}>
@@ -162,6 +164,7 @@ const EUMap: React.FC<EUMapProps> = ({
           </div>
         </div>
       </div>
+      <br />
       <svg
         baseProfile="tiny"
         fill="#949ba4"
@@ -176,7 +179,7 @@ const EUMap: React.FC<EUMapProps> = ({
         onMouseUp={mouseUpHandler}
         onMouseLeave={mouseLeaveBoxHandler}
         height="95%"
-        width="115%"
+        width="100%"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g transform={`translate(${offset.x},${offset.y})`}>

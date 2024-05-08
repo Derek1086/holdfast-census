@@ -1,25 +1,14 @@
 .buttonContainer {
   display: flex;
+  width: 100%;
+  gap: 10px;
 }
 
 .btns {
+  display: flex;
+  gap: 10px;
   width: 60%;
-}
-
-.btn {
-  background-color: transparent;
-  height: 40px;
-  width: 80px;
-  font-family: sans-serif;
-  color: white;
-  border: 0px solid #000;
-  cursor: pointer;
-  margin-left: 10px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: #40444b;
+  margin-left: 1%;
 }
 
 .legendContainer {
@@ -47,6 +36,7 @@
   height: 100%;
   display: flex;
   border: 2px solid #18191c;
+  border-radius: 10px;
 }
 
 .minText {
@@ -69,12 +59,15 @@
 
 .legendText {
   font-family: sans-serif;
+  color: black;
 }
 
 @media (max-width: 1000px) {
-  .btn {
-    height: 0px;
-    width: 0px;
-    color: transparent;
+  .btns {
+    display: none;
+  }
+
+  .legendContainer {
+    width: 80%;
   }
 }
