@@ -1,20 +1,18 @@
 import clientPromise from "../lib/mongodb";
 
-export default function Movies({ movies }) {
+export default function Players({ players }) {
   return (
     <div>
-      <h1>Top 20 Movies of All Time</h1>
-      <p>
-        <small>(According to Metacritic)</small>
-      </p>
       <ul>
-        {movies.map((movie) => (
-          <li key={movie._id.$oid}>
-            <h2>{movie.Region}</h2>
+        {players.map((playerChar) => (
+          <li key={playerChar._id.$oid}>
+            <h2>{playerChar.Region}</h2>
             <ul>
-              {movie.players.map((player) => (
+              {playerChar.players.map((player, index) => (
                 <li key={player.id}>
-                  <h3>{player.name}</h3>
+                  <h3>
+                    {index + 1}. {player.name}
+                  </h3>
                   <p>Regiment: {player.regiment}</p>
                   <p>City: {player.city}</p>
                   <p>Bio: {player.bio}</p>
@@ -76,12 +74,12 @@ export async function getServerSideProps() {
     const allData = transformedNaRegionData.concat(transformedEuRegionData);
 
     return {
-      props: { movies: JSON.parse(JSON.stringify(allData)) },
+      props: { players: JSON.parse(JSON.stringify(allData)) },
     };
   } catch (e) {
     console.error(e);
     return {
-      props: { movies: [] },
+      props: { players: [] },
     };
   }
 }

@@ -4,11 +4,6 @@ import classes from "./LocationDetails.module.css";
 interface LocationDetailsProps {
   region: string;
   selectedLocation: string;
-  filteredPlayers: string;
-  setFilteredPlayers: (id: string) => void;
-  setLocation: (newLocation: string) => void;
-  searchHandler: (input: string) => void;
-  setViewingPlayer: (id: string) => void;
 }
 
 var NAREGIONS = [
@@ -154,11 +149,6 @@ var EUREGIONS = [
 const LocationDetails: React.FC<LocationDetailsProps> = ({
   region,
   selectedLocation,
-  filteredPlayers,
-  setFilteredPlayers,
-  setLocation,
-  searchHandler,
-  setViewingPlayer,
 }) => {
   if (!region) {
     return <></>;
@@ -196,26 +186,8 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
     return "Invalid conversion type";
   };
 
-  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilteredPlayers(event.target.value);
-    setLocation("");
-    setViewingPlayer("");
-    searchHandler(event.target.value);
-  };
-
   return (
     <>
-      <div className={classes.container}>
-        <div className={classes.inputContainer}>
-          <input
-            className={classes.searchInput}
-            type="text"
-            placeholder="Search Players..."
-            value={filteredPlayers}
-            onChange={inputHandler}
-          ></input>
-        </div>
-      </div>
       <div className={classes.location}>
         {selectedLocation === ""
           ? "Choose Location"

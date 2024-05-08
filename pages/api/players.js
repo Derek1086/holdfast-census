@@ -25,7 +25,6 @@ export default async (req, res) => {
       .limit(10)
       .toArray();
 
-    // Transform data structure for both collections
     const transformData = (data) => {
       return data.map((entry) => ({
         _id: entry._id,
@@ -40,11 +39,9 @@ export default async (req, res) => {
       }));
     };
 
-    // Transform the data from both collections
     const transformedNaRegionData = transformData(naRegionData);
     const transformedEuRegionData = transformData(euRegionData);
 
-    // Combine the transformed data from both collections
     const allData = {
       NAREGION: transformedNaRegionData,
       EUREGION: transformedEuRegionData,

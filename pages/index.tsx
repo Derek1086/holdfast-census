@@ -4,6 +4,15 @@ import HeaderSection from "./components/HeaderSection/HeaderSection";
 import BodySection from "./components/BodySection/BodySection";
 import { GetStaticProps } from "next";
 
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
 export type Player = {
   id: string;
   name: string;
@@ -126,13 +135,18 @@ const Home: React.FC<Props> = ({ players }) => {
   };
 
   return (
-    <React.Fragment>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <title>Holdfast Melee Census</title>
       <link rel="icon" href="/favicon.ico" />
       <HeaderSection
         updateRegion={updateRegionHandler}
         region={region}
+        setViewingPlayer={setViewingPlayer}
+        setLocation={setLocation}
+        filteredPlayers={filteredPlayers}
         setFilteredPlayers={setFilteredPlayers}
+        searchHandler={searchHandler}
       />
       <BodySection
         region={region}
@@ -142,12 +156,10 @@ const Home: React.FC<Props> = ({ players }) => {
         viewingPlayer={viewingPlayer}
         regionalPlayers={regionalPlayers}
         playersInLocation={playersInLocation}
-        filteredPlayers={filteredPlayers}
         setFilteredPlayers={setFilteredPlayers}
-        searchHandler={searchHandler}
         searchedPlayers={searchedPlayers}
       />
-    </React.Fragment>
+    </ThemeProvider>
   );
 };
 

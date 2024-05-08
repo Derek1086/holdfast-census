@@ -14,9 +14,7 @@ interface BodySectionProps {
   viewingPlayer: string;
   regionalPlayers: RegionData | undefined;
   playersInLocation: Player[];
-  filteredPlayers: string;
   setFilteredPlayers: (id: string) => void;
-  searchHandler: (input: string) => void;
   searchedPlayers: Player[] | null;
 }
 
@@ -28,9 +26,7 @@ const BodySection: React.FC<BodySectionProps> = ({
   viewingPlayer,
   regionalPlayers,
   playersInLocation,
-  filteredPlayers,
   setFilteredPlayers,
-  searchHandler,
   searchedPlayers,
 }) => {
   return (
@@ -55,15 +51,7 @@ const BodySection: React.FC<BodySectionProps> = ({
       <div className={classes.locationContainer}>
         <div className={classes.detailContainer}>
           <h3 className={classes.locationTitle}>
-            <LocationDetails
-              region={region}
-              selectedLocation={location}
-              filteredPlayers={filteredPlayers}
-              setFilteredPlayers={setFilteredPlayers}
-              setLocation={setLocation}
-              searchHandler={searchHandler}
-              setViewingPlayer={setViewingPlayer}
-            />
+            <LocationDetails region={region} selectedLocation={location} />
           </h3>
           <div className={classes.details}>
             <PlayerList
