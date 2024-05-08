@@ -18,6 +18,7 @@ import Austro from "./bioImages/Austro.png";
 import BaconIsAwesome from "./bioImages/BaconIsAwesome.png";
 import Bahren from "./bioImages/Bahren.png";
 import Bandej from "./bioImages/Bandej.png";
+import berry from "./bioImages/berry.png";
 import Billjet from "./bioImages/Billjet.png";
 import Bliinx from "./bioImages/Bliinx.png";
 import Blondiii from "./bioImages/Blondiii.png";
@@ -77,6 +78,7 @@ import Fenno from "./bioImages/Fenno.jpg";
 import Hellameme from "./bioImages/Hellameme.png";
 import Highlander from "./bioImages/Highlander.png";
 import Hotspot from "./bioImages/Hotspot.jpg";
+import Hyphon from "./bioImages/Hyphon.png";
 import Incapablo from "./bioImages/Incapablo.png";
 import Irishman from "./bioImages/Irishman.png";
 import Inglorian from "./bioImages/Inglorian.png";
@@ -268,6 +270,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Blondiii;
         case "Brax":
           return Brax;
+        case "berry":
+          return berry;
         case "bushlinebyrant":
           return bushlinebyrant;
         case "Buxa":
@@ -370,6 +374,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Gimli;
         case "Haines":
           return Haines;
+        case "Hyphon":
+          return Hyphon;
         case "Ed":
           return Ed;
         case "Emiboy":
