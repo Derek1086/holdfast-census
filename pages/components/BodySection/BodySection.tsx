@@ -65,6 +65,7 @@ const BodySection: React.FC<BodySectionProps> = ({
           </div>
         </div>
       </div>
+      <br />
     </div>
   );
 };
