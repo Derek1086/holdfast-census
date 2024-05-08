@@ -14,15 +14,14 @@
 
 .locationContainer {
   width: 40%;
-  height: 90%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .detailContainer {
-  background-color: #2f3136;
-  border: 2px solid #40444b;
+  background-color: #272727;
   border-radius: 5px;
   height: 90%;
   width: 90%;

@@ -142,9 +142,15 @@ const EUMap: React.FC<EUMapProps> = ({
     <>
       <div className={classes.buttonContainer}>
         <div className={classes.btns}>
-          <button onClick={zoomInHandler}>Zoom In</button>
-          <button onClick={zoomOutHandler}>Zoom Out</button>
-          <button onClick={resetZoomHandler}>Reset</button>
+          <button className={classes.btn} onClick={zoomInHandler}>
+            Zoom In
+          </button>
+          <button className={classes.btn} onClick={zoomOutHandler}>
+            Zoom Out
+          </button>
+          <button className={classes.btn} onClick={resetZoomHandler}>
+            Reset
+          </button>
         </div>
         <div className={classes.legendContainer}>
           <div className={classes.legend}>

@@ -62,6 +62,19 @@
   color: black;
 }
 
+.btn {
+  background-color: #ce93d8;
+  border: none;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b236c8;
+}
+
 @media (max-width: 1000px) {
   .btns {
     display: none;
