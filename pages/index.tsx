@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import clientPromise from "../lib/mongodb";
 import HeaderSection from "./components/HeaderSection/HeaderSection";
