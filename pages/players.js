@@ -2,7 +2,7 @@ import clientPromise from "../lib/mongodb";
 
 export default function Players({ players }) {
   return (
-    <div>
+    <div style={{ color: "white" }}>
       <ul>
         {players.map((playerChar) => (
           <li key={playerChar._id.$oid}>
