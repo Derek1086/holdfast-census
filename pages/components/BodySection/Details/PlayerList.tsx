@@ -155,6 +155,7 @@ import VHA from "./bioImages/VHA.png";
 import Warden from "./bioImages/Warden.png";
 import Wodlapato from "./bioImages/Wodlapato.png";
 import WifiBills from "./bioImages/WifiBills.png";
+import WolfzHeartz499 from "./bioImages/WolfzHeartz499.png";
 import Wilson from "./bioImages/Wilson.png";
 import Wink from "./bioImages/Wink.png";
 import yoenkong from "./bioImages/yoenkong.png";
@@ -544,6 +545,8 @@ const PlayerList: React.FC<PlayerListProps> = ({
           return Wink;
         case "ytug":
           return ytug;
+        case "WolfzHeartz499":
+          return WolfzHeartz499;
         case "Yoenkong":
           return yoenkong;
         case "Zahar":
